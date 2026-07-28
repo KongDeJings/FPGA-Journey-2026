@@ -1,12 +1,11 @@
 # FPGA-Journey-2026
-FPGA Digital Design Projects |    | Verilog/SystemVerilog with testbenches
 
 # FPGA 项目集合
 
 本项目集合包含我裸辞自学 FPGA 四个月期间独立完成的两个核心项目，以及一个正在进行中的架构设计项目。
 
 ## 项目一：[基于 DDR3 的实时视频缓存与处理双缓冲系统](.1_double_buffer_ov5640_ddr3_hdmi)
-独立设计并实现基于 AXI4 总线的视频管道，解决单缓架构的图像撕裂问题，已通过实物验证，支持 1280×720@30fps 稳定输出。包含双缓冲乒乓操作与 RTL 设计。
+独立设计并实现基于 AXI4 总线的视频管道，解决单缓架构的图像撕裂问题，已通过实物验证，支持 1280×720@60fps 稳定输出。包含双缓冲乒乓操作与 RTL 设计。
 
 ## 项目二：[千兆以太网协议栈 RTL 实现](./2_ethernet_stack/)
 从 RTL 级实现完整以太网协议栈，支持 ICMP Ping、ARP 自动应答，已通过UDP回环测试，可直接用于接收、发送的以太网应用。已通过 Wireshark 验证 100% 无丢包。
