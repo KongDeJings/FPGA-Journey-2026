@@ -48,3 +48,7 @@
 
 -   `RTL/`：核心RTL代码（按MAC/IP/UDP/ICMP/ARP分层组织）
 -   `IMAGES/`：Wireshark验证截图、ILA调试截图、以太网架构图
+
+  
+## 上板实验回环截图
+![以太网协议栈上板验证图](./IMAGES/以太网上板验证图.jpg)
