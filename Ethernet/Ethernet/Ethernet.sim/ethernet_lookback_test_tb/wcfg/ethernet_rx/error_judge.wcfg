@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ethernet_tester_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="ethernet_tester" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="3445000000fs"></ZoomStartTime>
+      <ZoomEndTime time="13335000001fs"></ZoomEndTime>
+      <Cursor1Time time="5910000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="457"></NameColumnWidth>
+      <ValueColumnWidth column_width="371"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="26" />
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/clk_125m" type="logic">
+      <obj_property name="ElementShortName">clk_125m</obj_property>
+      <obj_property name="ObjectShortName">clk_125m</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/gmii_rxd" type="array">
+      <obj_property name="ElementShortName">gmii_rxd[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gmii_rxd[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/gmii_rx_dv" type="logic">
+      <obj_property name="ElementShortName">gmii_rx_dv</obj_property>
+      <obj_property name="ObjectShortName">gmii_rx_dv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_mac_rx_engine/packet_is_ip" type="logic">
+      <obj_property name="ElementShortName">packet_is_ip</obj_property>
+      <obj_property name="ObjectShortName">packet_is_ip</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_mac_rx_engine/packet_is_arp" type="logic">
+      <obj_property name="ElementShortName">packet_is_arp</obj_property>
+      <obj_property name="ObjectShortName">packet_is_arp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_mac_rx_engine/frame_rx_done" type="logic">
+      <obj_property name="ElementShortName">frame_rx_done</obj_property>
+      <obj_property name="ObjectShortName">frame_rx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_mac_rx_engine/crc_match" type="logic">
+      <obj_property name="ElementShortName">crc_match</obj_property>
+      <obj_property name="ObjectShortName">crc_match</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_mac_rx_engine/mac_rx_error" type="logic">
+      <obj_property name="ElementShortName">mac_rx_error</obj_property>
+      <obj_property name="ObjectShortName">mac_rx_error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_mac_rx_engine/eth_type_error" type="logic">
+      <obj_property name="ElementShortName">eth_type_error</obj_property>
+      <obj_property name="ObjectShortName">eth_type_error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_mac_rx_engine/mac_filter_match" type="logic">
+      <obj_property name="ElementShortName">mac_filter_match</obj_property>
+      <obj_property name="ObjectShortName">mac_filter_match</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_mac_rx_engine/frame_too_short" type="logic">
+      <obj_property name="ElementShortName">frame_too_short</obj_property>
+      <obj_property name="ObjectShortName">frame_too_short</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_mac_rx_engine/frame_too_long" type="logic">
+      <obj_property name="ElementShortName">frame_too_long</obj_property>
+      <obj_property name="ObjectShortName">frame_too_long</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_mac_rx_engine/gmii_rx_dv_fall" type="logic">
+      <obj_property name="ElementShortName">gmii_rx_dv_fall</obj_property>
+      <obj_property name="ObjectShortName">gmii_rx_dv_fall</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/arp_ip_filter_match" type="logic">
+      <obj_property name="ElementShortName">arp_ip_filter_match</obj_property>
+      <obj_property name="ObjectShortName">arp_ip_filter_match</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/arp_mac_filter_match" type="logic">
+      <obj_property name="ElementShortName">arp_mac_filter_match</obj_property>
+      <obj_property name="ObjectShortName">arp_mac_filter_match</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/arp_rx_error" type="logic">
+      <obj_property name="ElementShortName">arp_rx_error</obj_property>
+      <obj_property name="ObjectShortName">arp_rx_error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_ip_rx_engine/ip_checksum_match" type="logic">
+      <obj_property name="ElementShortName">ip_checksum_match</obj_property>
+      <obj_property name="ObjectShortName">ip_checksum_match</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_ip_rx_engine/ip_fillter_match" type="logic">
+      <obj_property name="ElementShortName">ip_fillter_match</obj_property>
+      <obj_property name="ObjectShortName">ip_fillter_match</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_ip_rx_engine/ip_message_error" type="logic">
+      <obj_property name="ElementShortName">ip_message_error</obj_property>
+      <obj_property name="ObjectShortName">ip_message_error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_ip_rx_engine/ip_header_done" type="logic">
+      <obj_property name="ElementShortName">ip_header_done</obj_property>
+      <obj_property name="ObjectShortName">ip_header_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/ip_rx_error" type="logic">
+      <obj_property name="ElementShortName">ip_rx_error</obj_property>
+      <obj_property name="ObjectShortName">ip_rx_error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_icmp_rx_engine/icmp_rx_done" type="logic">
+      <obj_property name="ElementShortName">icmp_rx_done</obj_property>
+      <obj_property name="ObjectShortName">icmp_rx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_icmp_rx_engine/icmp_rx_error" type="logic">
+      <obj_property name="ElementShortName">icmp_rx_error</obj_property>
+      <obj_property name="ObjectShortName">icmp_rx_error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_udp_rx_engine/udp_rx_error" type="logic">
+      <obj_property name="ElementShortName">udp_rx_error</obj_property>
+      <obj_property name="ObjectShortName">udp_rx_error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_udp_rx_engine/udp_rx_done" type="logic">
+      <obj_property name="ElementShortName">udp_rx_done</obj_property>
+      <obj_property name="ObjectShortName">udp_rx_done</obj_property>
+   </wvobject>
+</wave_config>

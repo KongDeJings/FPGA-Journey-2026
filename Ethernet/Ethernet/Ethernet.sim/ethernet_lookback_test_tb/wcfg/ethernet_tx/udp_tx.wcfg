@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ethernet_tx_top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="ethernet_tx_top_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="25560100000fs"></ZoomStartTime>
+      <ZoomEndTime time="69240100001fs"></ZoomEndTime>
+      <Cursor1Time time="41213000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="491"></NameColumnWidth>
+      <ValueColumnWidth column_width="325"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="62" />
+   <wvobject fp_name="/ethernet_tx_top_tb/udp_payload_fifo_test/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/udp_payload_fifo_test/wr_clk" type="logic">
+      <obj_property name="ElementShortName">wr_clk</obj_property>
+      <obj_property name="ObjectShortName">wr_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/udp_payload_fifo_test/rd_clk" type="logic">
+      <obj_property name="ElementShortName">rd_clk</obj_property>
+      <obj_property name="ObjectShortName">rd_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/udp_payload_fifo_test/din" type="array">
+      <obj_property name="ElementShortName">din[7:0]</obj_property>
+      <obj_property name="ObjectShortName">din[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/udp_payload_fifo_test/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/udp_payload_fifo_test/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/udp_payload_fifo_test/dout" type="array">
+      <obj_property name="ElementShortName">dout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/udp_payload_fifo_test/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/udp_payload_fifo_test/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/udp_payload_fifo_test/wr_rst_busy" type="logic">
+      <obj_property name="ElementShortName">wr_rst_busy</obj_property>
+      <obj_property name="ObjectShortName">wr_rst_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/udp_payload_fifo_test/rd_rst_busy" type="logic">
+      <obj_property name="ElementShortName">rd_rst_busy</obj_property>
+      <obj_property name="ObjectShortName">rd_rst_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/udp_start_pulse_primitive" type="logic">
+      <obj_property name="ElementShortName">udp_start_pulse_primitive</obj_property>
+      <obj_property name="ObjectShortName">udp_start_pulse_primitive</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/udp_tx_busy" type="logic">
+      <obj_property name="ElementShortName">udp_tx_busy</obj_property>
+      <obj_property name="ObjectShortName">udp_tx_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/udp_tx_done" type="logic">
+      <obj_property name="ElementShortName">udp_tx_done</obj_property>
+      <obj_property name="ObjectShortName">udp_tx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/ip_checksum_calc_start" type="logic">
+      <obj_property name="ElementShortName">ip_checksum_calc_start</obj_property>
+      <obj_property name="ObjectShortName">ip_checksum_calc_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/ip_checksum_calc_busy" type="logic">
+      <obj_property name="ElementShortName">ip_checksum_calc_busy</obj_property>
+      <obj_property name="ObjectShortName">ip_checksum_calc_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/ip_checksum" type="array">
+      <obj_property name="ElementShortName">ip_checksum[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ip_checksum[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/ip_checksum_valid" type="logic">
+      <obj_property name="ElementShortName">ip_checksum_valid</obj_property>
+      <obj_property name="ObjectShortName">ip_checksum_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/clk_125m" type="logic">
+      <obj_property name="ElementShortName">clk_125m</obj_property>
+      <obj_property name="ObjectShortName">clk_125m</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/tx_start" type="logic">
+      <obj_property name="ElementShortName">tx_start</obj_property>
+      <obj_property name="ObjectShortName">tx_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/tx_done" type="logic">
+      <obj_property name="ElementShortName">tx_done</obj_property>
+      <obj_property name="ObjectShortName">tx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/dst_mac" type="array">
+      <obj_property name="ElementShortName">dst_mac[47:0]</obj_property>
+      <obj_property name="ObjectShortName">dst_mac[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/src_mac" type="array">
+      <obj_property name="ElementShortName">src_mac[47:0]</obj_property>
+      <obj_property name="ObjectShortName">src_mac[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/dst_ip" type="array">
+      <obj_property name="ElementShortName">dst_ip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dst_ip[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/src_ip" type="array">
+      <obj_property name="ElementShortName">src_ip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">src_ip[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/dst_port" type="array">
+      <obj_property name="ElementShortName">dst_port[15:0]</obj_property>
+      <obj_property name="ObjectShortName">dst_port[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/src_port" type="array">
+      <obj_property name="ElementShortName">src_port[15:0]</obj_property>
+      <obj_property name="ObjectShortName">src_port[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/data_length" type="array">
+      <obj_property name="ElementShortName">data_length[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data_length[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/ip_checksum" type="array">
+      <obj_property name="ElementShortName">ip_checksum[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ip_checksum[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/fifo_data" type="array">
+      <obj_property name="ElementShortName">fifo_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/fifo_empty" type="logic">
+      <obj_property name="ElementShortName">fifo_empty</obj_property>
+      <obj_property name="ObjectShortName">fifo_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/fifo_rd_en" type="logic">
+      <obj_property name="ElementShortName">fifo_rd_en</obj_property>
+      <obj_property name="ObjectShortName">fifo_rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/rd_rst_busy_udp_tx_fifo" type="logic">
+      <obj_property name="ElementShortName">rd_rst_busy_udp_tx_fifo</obj_property>
+      <obj_property name="ObjectShortName">rd_rst_busy_udp_tx_fifo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/gmii_txd" type="array">
+      <obj_property name="ElementShortName">gmii_txd[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gmii_txd[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/gmii_tx_en" type="logic">
+      <obj_property name="ElementShortName">gmii_tx_en</obj_property>
+      <obj_property name="ObjectShortName">gmii_tx_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/byte_cnt" type="array">
+      <obj_property name="ElementShortName">byte_cnt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">byte_cnt[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/gmii_tx_ready" type="logic">
+      <obj_property name="ElementShortName">gmii_tx_ready</obj_property>
+      <obj_property name="ObjectShortName">gmii_tx_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/current_state" type="array">
+      <obj_property name="ElementShortName">current_state[6:0]</obj_property>
+      <obj_property name="ObjectShortName">current_state[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/next_state" type="array">
+      <obj_property name="ElementShortName">next_state[6:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/tx_start_pluse" type="logic">
+      <obj_property name="ElementShortName">tx_start_pluse</obj_property>
+      <obj_property name="ObjectShortName">tx_start_pluse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/tx_start_reg" type="array">
+      <obj_property name="ElementShortName">tx_start_reg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_start_reg[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/dst_mac_reg" type="array">
+      <obj_property name="ElementShortName">dst_mac_reg[47:0]</obj_property>
+      <obj_property name="ObjectShortName">dst_mac_reg[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/src_mac_reg" type="array">
+      <obj_property name="ElementShortName">src_mac_reg[47:0]</obj_property>
+      <obj_property name="ObjectShortName">src_mac_reg[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/dst_ip_reg" type="array">
+      <obj_property name="ElementShortName">dst_ip_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dst_ip_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/src_ip_reg" type="array">
+      <obj_property name="ElementShortName">src_ip_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">src_ip_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/dst_port_reg" type="array">
+      <obj_property name="ElementShortName">dst_port_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">dst_port_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/src_port_reg" type="array">
+      <obj_property name="ElementShortName">src_port_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">src_port_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/data_length_reg" type="array">
+      <obj_property name="ElementShortName">data_length_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data_length_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/ip_length" type="array">
+      <obj_property name="ElementShortName">ip_length[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ip_length[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/udp_length" type="array">
+      <obj_property name="ElementShortName">udp_length[15:0]</obj_property>
+      <obj_property name="ObjectShortName">udp_length[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/payload_remain_cnt" type="array">
+      <obj_property name="ElementShortName">payload_remain_cnt[15:0]</obj_property>
+      <obj_property name="ObjectShortName">payload_remain_cnt[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/gmii_txd_pre" type="array">
+      <obj_property name="ElementShortName">gmii_txd_pre[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gmii_txd_pre[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/send_condition" type="logic">
+      <obj_property name="ElementShortName">send_condition</obj_property>
+      <obj_property name="ObjectShortName">send_condition</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/send_payload_condition" type="logic">
+      <obj_property name="ElementShortName">send_payload_condition</obj_property>
+      <obj_property name="ObjectShortName">send_payload_condition</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/udp_payload_count" type="array">
+      <obj_property name="ElementShortName">udp_payload_count[10:0]</obj_property>
+      <obj_property name="ObjectShortName">udp_payload_count[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/crc_en_udp" type="logic">
+      <obj_property name="ElementShortName">crc_en_udp</obj_property>
+      <obj_property name="ObjectShortName">crc_en_udp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/crc_frame_end_udp" type="logic">
+      <obj_property name="ElementShortName">crc_frame_end_udp</obj_property>
+      <obj_property name="ObjectShortName">crc_frame_end_udp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/crc_data_in_udp" type="array">
+      <obj_property name="ElementShortName">crc_data_in_udp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">crc_data_in_udp[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/crc_data_valid_udp" type="logic">
+      <obj_property name="ElementShortName">crc_data_valid_udp</obj_property>
+      <obj_property name="ObjectShortName">crc_data_valid_udp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/crc_result_udp" type="array">
+      <obj_property name="ElementShortName">crc_result_udp[31:0]</obj_property>
+      <obj_property name="ObjectShortName">crc_result_udp[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_udp_tx_engine/crc_valid_udp" type="logic">
+      <obj_property name="ElementShortName">crc_valid_udp</obj_property>
+      <obj_property name="ObjectShortName">crc_valid_udp</obj_property>
+   </wvobject>
+</wave_config>

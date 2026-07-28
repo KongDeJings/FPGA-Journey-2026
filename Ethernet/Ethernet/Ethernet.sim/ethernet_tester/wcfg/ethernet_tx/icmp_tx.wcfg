@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ethernet_tx_top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="ethernet_tx_top_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="22104000000fs"></ZoomStartTime>
+      <ZoomEndTime time="22576000001fs"></ZoomEndTime>
+      <Cursor1Time time="23030000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="491"></NameColumnWidth>
+      <ValueColumnWidth column_width="325"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="63" />
+   <wvobject fp_name="/ethernet_tx_top_tb/icmp_payload_fifo_TEST/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/icmp_payload_fifo_TEST/srst" type="logic">
+      <obj_property name="ElementShortName">srst</obj_property>
+      <obj_property name="ObjectShortName">srst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/icmp_payload_fifo_TEST/din" type="array">
+      <obj_property name="ElementShortName">din[7:0]</obj_property>
+      <obj_property name="ObjectShortName">din[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/icmp_payload_fifo_TEST/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/icmp_payload_fifo_TEST/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/icmp_payload_fifo_TEST/dout" type="array">
+      <obj_property name="ElementShortName">dout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/icmp_payload_fifo_TEST/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/icmp_payload_fifo_TEST/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/icmp_payload_fifo_TEST/data_count" type="array">
+      <obj_property name="ElementShortName">data_count[9:0]</obj_property>
+      <obj_property name="ObjectShortName">data_count[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/ip_checksum_calc_start" type="logic">
+      <obj_property name="ElementShortName">ip_checksum_calc_start</obj_property>
+      <obj_property name="ObjectShortName">ip_checksum_calc_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/ip_checksum_calc_busy" type="logic">
+      <obj_property name="ElementShortName">ip_checksum_calc_busy</obj_property>
+      <obj_property name="ObjectShortName">ip_checksum_calc_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/ip_checksum" type="array">
+      <obj_property name="ElementShortName">ip_checksum[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ip_checksum[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/ip_checksum_valid" type="logic">
+      <obj_property name="ElementShortName">ip_checksum_valid</obj_property>
+      <obj_property name="ObjectShortName">ip_checksum_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/gmii_txd_pre" type="array">
+      <obj_property name="ElementShortName">gmii_txd_pre[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gmii_txd_pre[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/gmii_txd_r" type="array">
+      <obj_property name="ElementShortName">gmii_txd_r[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gmii_txd_r[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/icmp_gmii_txd" type="array">
+      <obj_property name="ElementShortName">icmp_gmii_txd[7:0]</obj_property>
+      <obj_property name="ObjectShortName">icmp_gmii_txd[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/icmp_gmii_tx_en" type="logic">
+      <obj_property name="ElementShortName">icmp_gmii_tx_en</obj_property>
+      <obj_property name="ObjectShortName">icmp_gmii_tx_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/current_state" type="array">
+      <obj_property name="ElementShortName">current_state[6:0]</obj_property>
+      <obj_property name="ObjectShortName">current_state[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/icmp_start" type="array">
+      <obj_property name="ElementShortName">icmp_start[1:0]</obj_property>
+      <obj_property name="ObjectShortName">icmp_start[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/icmp_checksum" type="array">
+      <obj_property name="ElementShortName">icmp_checksum[15:0]</obj_property>
+      <obj_property name="ObjectShortName">icmp_checksum[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/ip_length_dynamic" type="array">
+      <obj_property name="ElementShortName">ip_length_dynamic[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ip_length_dynamic[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/ip_protocol_dynamic" type="array">
+      <obj_property name="ElementShortName">ip_protocol_dynamic[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ip_protocol_dynamic[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/icmp_ip_checksum" type="array">
+      <obj_property name="ElementShortName">icmp_ip_checksum[15:0]</obj_property>
+      <obj_property name="ObjectShortName">icmp_ip_checksum[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/clk_125m" type="logic">
+      <obj_property name="ElementShortName">clk_125m</obj_property>
+      <obj_property name="ObjectShortName">clk_125m</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/tx_start" type="logic">
+      <obj_property name="ElementShortName">tx_start</obj_property>
+      <obj_property name="ObjectShortName">tx_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/tx_done" type="logic">
+      <obj_property name="ElementShortName">tx_done</obj_property>
+      <obj_property name="ObjectShortName">tx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/dst_mac" type="array">
+      <obj_property name="ElementShortName">dst_mac[47:0]</obj_property>
+      <obj_property name="ObjectShortName">dst_mac[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/src_mac" type="array">
+      <obj_property name="ElementShortName">src_mac[47:0]</obj_property>
+      <obj_property name="ObjectShortName">src_mac[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/dst_ip" type="array">
+      <obj_property name="ElementShortName">dst_ip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dst_ip[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/src_ip" type="array">
+      <obj_property name="ElementShortName">src_ip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">src_ip[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/icmp_identifier" type="array">
+      <obj_property name="ElementShortName">icmp_identifier[15:0]</obj_property>
+      <obj_property name="ObjectShortName">icmp_identifier[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/icmp_sequence" type="array">
+      <obj_property name="ElementShortName">icmp_sequence[15:0]</obj_property>
+      <obj_property name="ObjectShortName">icmp_sequence[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/data_length" type="array">
+      <obj_property name="ElementShortName">data_length[10:0]</obj_property>
+      <obj_property name="ObjectShortName">data_length[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/ip_checksum" type="array">
+      <obj_property name="ElementShortName">ip_checksum[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ip_checksum[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/icmp_checksum" type="array">
+      <obj_property name="ElementShortName">icmp_checksum[15:0]</obj_property>
+      <obj_property name="ObjectShortName">icmp_checksum[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/fifo_data" type="array">
+      <obj_property name="ElementShortName">fifo_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_data[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/fifo_empty" type="logic">
+      <obj_property name="ElementShortName">fifo_empty</obj_property>
+      <obj_property name="ObjectShortName">fifo_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/fifo_rd_en" type="logic">
+      <obj_property name="ElementShortName">fifo_rd_en</obj_property>
+      <obj_property name="ObjectShortName">fifo_rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/gmii_txd" type="array">
+      <obj_property name="ElementShortName">gmii_txd[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gmii_txd[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/gmii_tx_en" type="logic">
+      <obj_property name="ElementShortName">gmii_tx_en</obj_property>
+      <obj_property name="ObjectShortName">gmii_tx_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/gmii_tx_ready" type="logic">
+      <obj_property name="ElementShortName">gmii_tx_ready</obj_property>
+      <obj_property name="ObjectShortName">gmii_tx_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/next_state" type="array">
+      <obj_property name="ElementShortName">next_state[6:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/tx_start_pluse" type="logic">
+      <obj_property name="ElementShortName">tx_start_pluse</obj_property>
+      <obj_property name="ObjectShortName">tx_start_pluse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/tx_start_reg" type="array">
+      <obj_property name="ElementShortName">tx_start_reg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_start_reg[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/dst_mac_reg" type="array">
+      <obj_property name="ElementShortName">dst_mac_reg[47:0]</obj_property>
+      <obj_property name="ObjectShortName">dst_mac_reg[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/src_mac_reg" type="array">
+      <obj_property name="ElementShortName">src_mac_reg[47:0]</obj_property>
+      <obj_property name="ObjectShortName">src_mac_reg[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/dst_ip_reg" type="array">
+      <obj_property name="ElementShortName">dst_ip_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dst_ip_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/src_ip_reg" type="array">
+      <obj_property name="ElementShortName">src_ip_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">src_ip_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/icmp_identifier_reg" type="array">
+      <obj_property name="ElementShortName">icmp_identifier_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">icmp_identifier_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/icmp_sequence_reg" type="array">
+      <obj_property name="ElementShortName">icmp_sequence_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">icmp_sequence_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/data_length_reg" type="array">
+      <obj_property name="ElementShortName">data_length_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data_length_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/icmp_checksum_reg" type="array">
+      <obj_property name="ElementShortName">icmp_checksum_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">icmp_checksum_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/ip_length" type="array">
+      <obj_property name="ElementShortName">ip_length[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ip_length[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/byte_cnt" type="array">
+      <obj_property name="ElementShortName">byte_cnt[15:0]</obj_property>
+      <obj_property name="ObjectShortName">byte_cnt[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/send_condition" type="logic">
+      <obj_property name="ElementShortName">send_condition</obj_property>
+      <obj_property name="ObjectShortName">send_condition</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/payload_send_condition" type="logic">
+      <obj_property name="ElementShortName">payload_send_condition</obj_property>
+      <obj_property name="ObjectShortName">payload_send_condition</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/crc_en_icmp" type="logic">
+      <obj_property name="ElementShortName">crc_en_icmp</obj_property>
+      <obj_property name="ObjectShortName">crc_en_icmp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/crc_frame_end_icmp" type="logic">
+      <obj_property name="ElementShortName">crc_frame_end_icmp</obj_property>
+      <obj_property name="ObjectShortName">crc_frame_end_icmp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/crc_data_in_icmp" type="array">
+      <obj_property name="ElementShortName">crc_data_in_icmp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">crc_data_in_icmp[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/crc_data_valid_icmp" type="logic">
+      <obj_property name="ElementShortName">crc_data_valid_icmp</obj_property>
+      <obj_property name="ObjectShortName">crc_data_valid_icmp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/crc_result_icmp" type="array">
+      <obj_property name="ElementShortName">crc_result_icmp[31:0]</obj_property>
+      <obj_property name="ObjectShortName">crc_result_icmp[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_icmp_tx_engine/crc_valid_icmp" type="logic">
+      <obj_property name="ElementShortName">crc_valid_icmp</obj_property>
+      <obj_property name="ObjectShortName">crc_valid_icmp</obj_property>
+   </wvobject>
+</wave_config>

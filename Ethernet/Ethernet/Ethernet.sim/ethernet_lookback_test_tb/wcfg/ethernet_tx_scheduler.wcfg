@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ethernet_tx_top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="ethernet_tx_top_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="100000000001fs"></ZoomEndTime>
+      <Cursor1Time time="32100000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="491"></NameColumnWidth>
+      <ValueColumnWidth column_width="317"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="23" />
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_scheduler/clk_125m" type="logic">
+      <obj_property name="ElementShortName">clk_125m</obj_property>
+      <obj_property name="ObjectShortName">clk_125m</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_scheduler/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_scheduler/arp_tx_reply_req" type="logic">
+      <obj_property name="ElementShortName">arp_tx_reply_req</obj_property>
+      <obj_property name="ObjectShortName">arp_tx_reply_req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_scheduler/arp_reply_start_pulse" type="logic">
+      <obj_property name="ElementShortName">arp_reply_start_pulse</obj_property>
+      <obj_property name="ObjectShortName">arp_reply_start_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_scheduler/arp_tx_request_req" type="logic">
+      <obj_property name="ElementShortName">arp_tx_request_req</obj_property>
+      <obj_property name="ObjectShortName">arp_tx_request_req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_scheduler/arp_request_start_pulse" type="logic">
+      <obj_property name="ElementShortName">arp_request_start_pulse</obj_property>
+      <obj_property name="ObjectShortName">arp_request_start_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_scheduler/arp_tx_busy" type="logic">
+      <obj_property name="ElementShortName">arp_tx_busy</obj_property>
+      <obj_property name="ObjectShortName">arp_tx_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_scheduler/arp_tx_done" type="logic">
+      <obj_property name="ElementShortName">arp_tx_done</obj_property>
+      <obj_property name="ObjectShortName">arp_tx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_scheduler/icmp_tx_reply_req" type="logic">
+      <obj_property name="ElementShortName">icmp_tx_reply_req</obj_property>
+      <obj_property name="ObjectShortName">icmp_tx_reply_req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_scheduler/icmp_start_pulse_primitive" type="logic">
+      <obj_property name="ElementShortName">icmp_start_pulse_primitive</obj_property>
+      <obj_property name="ObjectShortName">icmp_start_pulse_primitive</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_scheduler/icmp_tx_busy" type="logic">
+      <obj_property name="ElementShortName">icmp_tx_busy</obj_property>
+      <obj_property name="ObjectShortName">icmp_tx_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_scheduler/icmp_tx_done" type="logic">
+      <obj_property name="ElementShortName">icmp_tx_done</obj_property>
+      <obj_property name="ObjectShortName">icmp_tx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_scheduler/udp_tx_req" type="logic">
+      <obj_property name="ElementShortName">udp_tx_req</obj_property>
+      <obj_property name="ObjectShortName">udp_tx_req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_scheduler/udp_start_pulse_primitive" type="logic">
+      <obj_property name="ElementShortName">udp_start_pulse_primitive</obj_property>
+      <obj_property name="ObjectShortName">udp_start_pulse_primitive</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_scheduler/udp_tx_busy" type="logic">
+      <obj_property name="ElementShortName">udp_tx_busy</obj_property>
+      <obj_property name="ObjectShortName">udp_tx_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_scheduler/udp_tx_done" type="logic">
+      <obj_property name="ElementShortName">udp_tx_done</obj_property>
+      <obj_property name="ObjectShortName">udp_tx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_scheduler/current_grant" type="array">
+      <obj_property name="ElementShortName">current_grant[3:0]</obj_property>
+      <obj_property name="ObjectShortName">current_grant[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_scheduler/arb_enable" type="logic">
+      <obj_property name="ElementShortName">arb_enable</obj_property>
+      <obj_property name="ObjectShortName">arb_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_scheduler/grant" type="array">
+      <obj_property name="ElementShortName">grant[3:0]</obj_property>
+      <obj_property name="ObjectShortName">grant[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_scheduler/grant_dly" type="array">
+      <obj_property name="ElementShortName">grant_dly[3:0]</obj_property>
+      <obj_property name="ObjectShortName">grant_dly[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/gmii_txd" type="array">
+      <obj_property name="ElementShortName">gmii_txd[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gmii_txd[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/gmii_tx_en" type="logic">
+      <obj_property name="ElementShortName">gmii_tx_en</obj_property>
+      <obj_property name="ObjectShortName">gmii_tx_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/arp_gmii_tx_ready" type="logic">
+      <obj_property name="ElementShortName">arp_gmii_tx_ready</obj_property>
+      <obj_property name="ObjectShortName">arp_gmii_tx_ready</obj_property>
+   </wvobject>
+</wave_config>

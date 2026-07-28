@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ethernet_tester_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="ethernet_tester" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="6910000000fs"></ZoomStartTime>
+      <ZoomEndTime time="9930000001fs"></ZoomEndTime>
+      <Cursor1Time time="12730000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="457"></NameColumnWidth>
+      <ValueColumnWidth column_width="367"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="48" />
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_cache/clk_125m" type="logic">
+      <obj_property name="ElementShortName">clk_125m</obj_property>
+      <obj_property name="ObjectShortName">clk_125m</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_cache/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_cache/arp_src_mac" type="array">
+      <obj_property name="ElementShortName">arp_src_mac[47:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_src_mac[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_cache/arp_src_ip" type="array">
+      <obj_property name="ElementShortName">arp_src_ip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_src_ip[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_cache/arp_dst_mac" type="array">
+      <obj_property name="ElementShortName">arp_dst_mac[47:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_dst_mac[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_cache/arp_dst_ip" type="array">
+      <obj_property name="ElementShortName">arp_dst_ip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_dst_ip[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_cache/arp_opcode" type="array">
+      <obj_property name="ElementShortName">arp_opcode[15:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_opcode[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_cache/arp_target_mac" type="array">
+      <obj_property name="ElementShortName">arp_target_mac[47:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_target_mac[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_cache/arp_target_ip" type="array">
+      <obj_property name="ElementShortName">arp_target_ip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_target_ip[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_cache/local_ip" type="array">
+      <obj_property name="ElementShortName">local_ip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">local_ip[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_cache/CACHE_SIZE" type="array">
+      <obj_property name="ElementShortName">CACHE_SIZE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CACHE_SIZE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_cache/AGING_SEC" type="array">
+      <obj_property name="ElementShortName">AGING_SEC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">AGING_SEC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_cache/CLOCK_FREQUENCY" type="array">
+      <obj_property name="ElementShortName">CLOCK_FREQUENCY[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLOCK_FREQUENCY[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_cache/BROADCAST_MAC" type="array">
+      <obj_property name="ElementShortName">BROADCAST_MAC[47:0]</obj_property>
+      <obj_property name="ObjectShortName">BROADCAST_MAC[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/clk_125m" type="logic">
+      <obj_property name="ElementShortName">clk_125m</obj_property>
+      <obj_property name="ObjectShortName">clk_125m</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/arp_rx_data" type="array">
+      <obj_property name="ElementShortName">arp_rx_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_rx_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/arp_rx_valid" type="logic">
+      <obj_property name="ElementShortName">arp_rx_valid</obj_property>
+      <obj_property name="ObjectShortName">arp_rx_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/arp_rx_start" type="logic">
+      <obj_property name="ElementShortName">arp_rx_start</obj_property>
+      <obj_property name="ObjectShortName">arp_rx_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/arp_byte_cnt" type="array">
+      <obj_property name="ElementShortName">arp_byte_cnt[15:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_byte_cnt[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/packet_is_arp" type="logic">
+      <obj_property name="ElementShortName">packet_is_arp</obj_property>
+      <obj_property name="ObjectShortName">packet_is_arp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/local_ip" type="array">
+      <obj_property name="ElementShortName">local_ip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">local_ip[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/local_mac" type="array">
+      <obj_property name="ElementShortName">local_mac[47:0]</obj_property>
+      <obj_property name="ObjectShortName">local_mac[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/arp_src_mac" type="array">
+      <obj_property name="ElementShortName">arp_src_mac[47:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_src_mac[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/arp_src_ip" type="array">
+      <obj_property name="ElementShortName">arp_src_ip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_src_ip[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/arp_dst_mac" type="array">
+      <obj_property name="ElementShortName">arp_dst_mac[47:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_dst_mac[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/arp_dst_ip" type="array">
+      <obj_property name="ElementShortName">arp_dst_ip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_dst_ip[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/arp_opcode" type="array">
+      <obj_property name="ElementShortName">arp_opcode[15:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_opcode[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_cache/arp_frame_rx_done" type="logic">
+      <obj_property name="ElementShortName">arp_frame_rx_done</obj_property>
+      <obj_property name="ObjectShortName">arp_frame_rx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/arp_rx_error" type="logic">
+      <obj_property name="ElementShortName">arp_rx_error</obj_property>
+      <obj_property name="ObjectShortName">arp_rx_error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/current_state" type="array">
+      <obj_property name="ElementShortName">current_state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">current_state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/next_state" type="array">
+      <obj_property name="ElementShortName">next_state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/arp_hw_type" type="array">
+      <obj_property name="ElementShortName">arp_hw_type[15:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_hw_type[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/arp_proto_type" type="array">
+      <obj_property name="ElementShortName">arp_proto_type[15:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_proto_type[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/arp_hw_len" type="array">
+      <obj_property name="ElementShortName">arp_hw_len[7:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_hw_len[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/arp_proto_len" type="array">
+      <obj_property name="ElementShortName">arp_proto_len[7:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_proto_len[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/arp_ip_filter_match" type="logic">
+      <obj_property name="ElementShortName">arp_ip_filter_match</obj_property>
+      <obj_property name="ObjectShortName">arp_ip_filter_match</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/arp_mac_filter_match" type="logic">
+      <obj_property name="ElementShortName">arp_mac_filter_match</obj_property>
+      <obj_property name="ObjectShortName">arp_mac_filter_match</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/ARP_LENGTH" type="array">
+      <obj_property name="ElementShortName">ARP_LENGTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ARP_LENGTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/IDLE" type="array">
+      <obj_property name="ElementShortName">IDLE[1:0]</obj_property>
+      <obj_property name="ObjectShortName">IDLE[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/S_PARSE_ARP" type="array">
+      <obj_property name="ElementShortName">S_PARSE_ARP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_PARSE_ARP[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/ARP_HW_TYPE_ETHERNET" type="array">
+      <obj_property name="ElementShortName">ARP_HW_TYPE_ETHERNET[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ARP_HW_TYPE_ETHERNET[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/ARP_PROTO_TYPE_IPV4" type="array">
+      <obj_property name="ElementShortName">ARP_PROTO_TYPE_IPV4[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ARP_PROTO_TYPE_IPV4[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/ARP_HW_ADDR_LEN_ETH" type="array">
+      <obj_property name="ElementShortName">ARP_HW_ADDR_LEN_ETH[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ARP_HW_ADDR_LEN_ETH[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/ARP_PROTO_ADDR_LEN_IPV4" type="array">
+      <obj_property name="ElementShortName">ARP_PROTO_ADDR_LEN_IPV4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ARP_PROTO_ADDR_LEN_IPV4[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/ARP_OPCODE_REQUEST" type="array">
+      <obj_property name="ElementShortName">ARP_OPCODE_REQUEST[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ARP_OPCODE_REQUEST[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/ARP_OPCODE_REPLY" type="array">
+      <obj_property name="ElementShortName">ARP_OPCODE_REPLY[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ARP_OPCODE_REPLY[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tester/u_ether_rx_top/u_arp_rx_engine/ARP_NULL_MAC" type="array">
+      <obj_property name="ElementShortName">ARP_NULL_MAC[47:0]</obj_property>
+      <obj_property name="ObjectShortName">ARP_NULL_MAC[47:0]</obj_property>
+   </wvobject>
+</wave_config>

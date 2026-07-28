@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="E:/test_field/run/camera_ddr3_hdmi/camera_ddr3_hdmi.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="16384000fs"></ZoomEndTime>
+      <Cursor1Time time="8280000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="613"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="11" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/&lt;const0&gt;" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/&lt;const0&gt;</obj_property>
+      <obj_property name="ObjectShortName">&lt;const0&gt;</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/frame_read_done" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/frame_read_done</obj_property>
+      <obj_property name="ObjectShortName">frame_read_done</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/frame_read_done_safe" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/frame_read_done_safe</obj_property>
+      <obj_property name="ObjectShortName">frame_read_done_safe</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/m_axi_araddr" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/m_axi_araddr[30:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axi_araddr[30:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/m_axi_rlast" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/m_axi_rlast</obj_property>
+      <obj_property name="ObjectShortName">m_axi_rlast</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/m_axi_rvalid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/m_axi_rvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axi_rvalid</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/r_cnt_done" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/r_cnt_done</obj_property>
+      <obj_property name="ObjectShortName">r_cnt_done</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/r_done" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/r_done</obj_property>
+      <obj_property name="ObjectShortName">r_done</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/rd_burst_done_cnt" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/rd_burst_done_cnt[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_burst_done_cnt[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/rd_enable" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/rd_enable</obj_property>
+      <obj_property name="ObjectShortName">rd_enable</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/rd_ddr3_req_pulse" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ddr3_ctrl_2port/u_fifo_axi4_adapter/axi4_to_fifo_inst/rd_ddr3_req_pulse</obj_property>
+      <obj_property name="ObjectShortName">rd_ddr3_req_pulse</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

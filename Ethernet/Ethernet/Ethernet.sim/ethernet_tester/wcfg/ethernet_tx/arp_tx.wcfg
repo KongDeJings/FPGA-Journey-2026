@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ethernet_tx_top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="ethernet_tx_top_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="12103666667fs"></ZoomStartTime>
+      <ZoomEndTime time="13191666668fs"></ZoomEndTime>
+      <Cursor1Time time="12457167000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="491"></NameColumnWidth>
+      <ValueColumnWidth column_width="333"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="36" />
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/clk_125m" type="logic">
+      <obj_property name="ElementShortName">clk_125m</obj_property>
+      <obj_property name="ObjectShortName">clk_125m</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/arp_reply_req" type="logic">
+      <obj_property name="ElementShortName">arp_reply_req</obj_property>
+      <obj_property name="ObjectShortName">arp_reply_req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/arp_target_mac" type="array">
+      <obj_property name="ElementShortName">arp_target_mac[47:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_target_mac[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/arp_target_ip" type="array">
+      <obj_property name="ElementShortName">arp_target_ip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_target_ip[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/arp_tx_req" type="logic">
+      <obj_property name="ElementShortName">arp_tx_req</obj_property>
+      <obj_property name="ObjectShortName">arp_tx_req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/arp_tx_ip" type="array">
+      <obj_property name="ElementShortName">arp_tx_ip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_tx_ip[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/arp_tx_dst_mac" type="array">
+      <obj_property name="ElementShortName">arp_tx_dst_mac[47:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_tx_dst_mac[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/gmii_tx_en" type="logic">
+      <obj_property name="ElementShortName">gmii_tx_en</obj_property>
+      <obj_property name="ObjectShortName">gmii_tx_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/gmii_tx_en_pre" type="logic">
+      <obj_property name="ElementShortName">gmii_tx_en_pre</obj_property>
+      <obj_property name="ObjectShortName">gmii_tx_en_pre</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/gmii_txd" type="array">
+      <obj_property name="ElementShortName">gmii_txd[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gmii_txd[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/gmii_txd_pre" type="array">
+      <obj_property name="ElementShortName">gmii_txd_pre[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gmii_txd_pre[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/byte_cnt" type="array">
+      <obj_property name="ElementShortName">byte_cnt[6:0]</obj_property>
+      <obj_property name="ObjectShortName">byte_cnt[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/current_state" type="array">
+      <obj_property name="ElementShortName">current_state[5:0]</obj_property>
+      <obj_property name="ObjectShortName">current_state[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/crc_result_arp" type="array">
+      <obj_property name="ElementShortName">crc_result_arp[31:0]</obj_property>
+      <obj_property name="ObjectShortName">crc_result_arp[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/gmii_tx_ready" type="logic">
+      <obj_property name="ElementShortName">gmii_tx_ready</obj_property>
+      <obj_property name="ObjectShortName">gmii_tx_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/local_mac" type="array">
+      <obj_property name="ElementShortName">local_mac[47:0]</obj_property>
+      <obj_property name="ObjectShortName">local_mac[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/local_ip" type="array">
+      <obj_property name="ElementShortName">local_ip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">local_ip[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/arp_tx_done" type="logic">
+      <obj_property name="ElementShortName">arp_tx_done</obj_property>
+      <obj_property name="ObjectShortName">arp_tx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/crc_en_arp" type="logic">
+      <obj_property name="ElementShortName">crc_en_arp</obj_property>
+      <obj_property name="ObjectShortName">crc_en_arp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/crc_frame_end_arp" type="logic">
+      <obj_property name="ElementShortName">crc_frame_end_arp</obj_property>
+      <obj_property name="ObjectShortName">crc_frame_end_arp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/crc_data_in_arp" type="array">
+      <obj_property name="ElementShortName">crc_data_in_arp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">crc_data_in_arp[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/crc_data_valid_arp" type="logic">
+      <obj_property name="ElementShortName">crc_data_valid_arp</obj_property>
+      <obj_property name="ObjectShortName">crc_data_valid_arp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/crc_valid_arp" type="logic">
+      <obj_property name="ElementShortName">crc_valid_arp</obj_property>
+      <obj_property name="ObjectShortName">crc_valid_arp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/arp_opcode_reg" type="array">
+      <obj_property name="ElementShortName">arp_opcode_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">arp_opcode_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/src_mac_reg" type="array">
+      <obj_property name="ElementShortName">src_mac_reg[47:0]</obj_property>
+      <obj_property name="ObjectShortName">src_mac_reg[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/src_ip_reg" type="array">
+      <obj_property name="ElementShortName">src_ip_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">src_ip_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/target_mac_reg" type="array">
+      <obj_property name="ElementShortName">target_mac_reg[47:0]</obj_property>
+      <obj_property name="ObjectShortName">target_mac_reg[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/target_ip_reg" type="array">
+      <obj_property name="ElementShortName">target_ip_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">target_ip_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/broadcast_mac" type="array">
+      <obj_property name="ElementShortName">broadcast_mac[47:0]</obj_property>
+      <obj_property name="ObjectShortName">broadcast_mac[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/reply_arp_tx_start_pluse" type="logic">
+      <obj_property name="ElementShortName">reply_arp_tx_start_pluse</obj_property>
+      <obj_property name="ObjectShortName">reply_arp_tx_start_pluse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/request_arp_tx_start_pluse" type="logic">
+      <obj_property name="ElementShortName">request_arp_tx_start_pluse</obj_property>
+      <obj_property name="ObjectShortName">request_arp_tx_start_pluse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/arp_tx_start_pluse" type="logic">
+      <obj_property name="ElementShortName">arp_tx_start_pluse</obj_property>
+      <obj_property name="ObjectShortName">arp_tx_start_pluse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/reply_start_reg" type="array">
+      <obj_property name="ElementShortName">reply_start_reg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">reply_start_reg[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/request_start_reg" type="array">
+      <obj_property name="ElementShortName">request_start_reg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">request_start_reg[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ethernet_tx_top_tb/u_ethernet_tx_top/u_arp_tx_engine/send_condition" type="logic">
+      <obj_property name="ElementShortName">send_condition</obj_property>
+      <obj_property name="ObjectShortName">send_condition</obj_property>
+   </wvobject>
+</wave_config>
