@@ -88,7 +88,8 @@
 #### [MDIO底层读写基本操作单元](./RTL/Ethernet.srcs/sources_1/phy_init/mdio_shift_bit.v)
 #### [PHY上电初始化复位管理](./RTL/Ethernet.srcs/sources_1/phy_init/phy_init_ctrl.v)
 
-
+### 仿真文件文件夹
+#### [以太网协议栈所有代码的仿真测试文件](./RTL/Ethernet.srcs/sim_1)
 -   `IMAGES/`：Wireshark验证截图、ILA调试截图、以太网架构图
 
   
