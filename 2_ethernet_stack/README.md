@@ -47,7 +47,31 @@
 ## 文件说明
 
 -   `RTL/`：核心RTL代码
-#### 项目二：[以太网协议栈顶层](./RTL/Ethernet.srcs/sources_1/ethernet_top.v)
+
+### 顶层与回环测试
+#### [gmii以太网协议栈顶层](./RTL/Ethernet.srcs/sources_1/ethernet_top.v)
+#### [rgmii以太网协议栈顶层](./RTL/Ethernet.srcs/sources_1/ethernet_top_rgmii.v)
+##### [UDP回环测试](./RTL/Ethernet.srcs/sources_1/ethernet_lookback_test.v)
+##### [UDP回环数据转发](./RTL/Ethernet.srcs/sources_1/udp_lookback.v)
+
+### 接收模块
+#### [以太网协议栈接收顶层](./RTL/Ethernet.srcs/sources_1/ethernet_rx/ethernet_rx_top.v)
+##### [MAC头接收](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/mac_rx_engine.v)
+##### [ARP接收](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/arp_rx_engine.v)
+##### [IP头接收](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/ip_rx_engine.v)
+##### [ICMP接收](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/icmp_rx_engine.v)
+##### [UDP接收](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/udp_rx_engine.v)
+##### [ARP回复控制](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/arp_cache_requester/arp_cache.v)
+
+
+
+
+
+
+
+
+
+
 
 
 -   `IMAGES/`：Wireshark验证截图、ILA调试截图、以太网架构图
