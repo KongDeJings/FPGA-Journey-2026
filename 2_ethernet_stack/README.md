@@ -77,12 +77,16 @@
 ##### [UDP发送](./RTL/Ethernet.srcs/sources_1/ethernet_tx/main_module/udp_tx_engine.v)
 
 ### CRC计算
-#### [CRC计算控制模块](./RTL/Ethernet.srcs/sources_1/gmii_rgmii_transfer/gmii_to_rgmii.v)
-#### [并行CRC计算模块](./RTL/Ethernet.srcs/sources_1/gmii_rgmii_transfer/rgmii_to_gmii.v)
+#### [并行CRC计算模块](./RTL/Ethernet.srcs/sources_1/checksum_crc/crc32/crc32.v)
+#### [CRC计算控制模块](./RTL/Ethernet.srcs/sources_1/checksum_crc/crc32/eth_crc32_parallel.v)
 
+### checksum计算
+#### [ICMP checksum串行移位计算](./RTL/Ethernet.srcs/sources_1/checksum_crc/icmp_checksum/icmp_checksum.v)
+#### [IP checksum5级流水线并行计算](./RTL/Ethernet.srcs/sources_1/checksum_crc/ip_checksum/ip_checksum_pipeline.v)
 
-
-
+### PHY初始化（未使用MDIO初始化PHY，但我保留了下来）
+#### [MDIO底层读写基本操作单元](./RTL/Ethernet.srcs/sources_1/phy_init/mdio_shift_bit.v)
+#### [PHY上电初始化复位管理](./RTL/Ethernet.srcs/sources_1/phy_init/phy_init_ctrl.v)
 
 
 -   `IMAGES/`：Wireshark验证截图、ILA调试截图、以太网架构图
