@@ -54,6 +54,11 @@
 ##### [UDP回环测试](./RTL/Ethernet.srcs/sources_1/ethernet_lookback_test.v)
 ##### [UDP回环数据转发](./RTL/Ethernet.srcs/sources_1/udp_lookback.v)
 
+### GMII与RGMII转换
+#### [gmii转rgmii](./RTL/Ethernet.srcs/sources_1/gmii_rgmii_transfer/gmii_to_rgmii.v)
+#### [rgmii转gmii](./RTL/Ethernet.srcs/sources_1/gmii_rgmii_transfer/rgmii_to_gmii.v)
+
+
 ### 接收模块
 #### [以太网协议栈接收顶层](./RTL/Ethernet.srcs/sources_1/ethernet_rx/ethernet_rx_top.v)
 ##### [MAC头接收](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/mac_rx_engine.v)
@@ -61,13 +66,19 @@
 ##### [IP头接收](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/ip_rx_engine.v)
 ##### [ICMP接收](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/icmp_rx_engine.v)
 ##### [UDP接收](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/udp_rx_engine.v)
-##### [ARP回复控制](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/arp_cache_requester/arp_cache.v)
+##### [ARP回复控制](./RTL/Ethernet.srcs/sources_1/ethernet_rx/arp_cache_requester/arp_cache.v)
 
 
+### 发送模块
+#### [以太网协议栈发送顶层](./RTL/Ethernet.srcs/sources_1/ethernet_tx/ethernet_tx_top.v)
+#### [以太网协议栈源端发送仲裁](./RTL/Ethernet.srcs/sources_1/ethernet_tx/ethernet_tx_scheduler.v)
+##### [ARP发送](./RTL/Ethernet.srcs/sources_1/ethernet_tx/main_module/arp_tx_engine.v)
+##### [ICMP发送](./RTL/Ethernet.srcs/sources_1/ethernet_tx/main_module/icmp_tx_engine.v)
+##### [UDP发送](./RTL/Ethernet.srcs/sources_1/ethernet_tx/main_module/udp_tx_engine.v)
 
-
-
-
+### CRC计算
+#### [CRC计算控制模块](./RTL/Ethernet.srcs/sources_1/gmii_rgmii_transfer/gmii_to_rgmii.v)
+#### [并行CRC计算模块](./RTL/Ethernet.srcs/sources_1/gmii_rgmii_transfer/rgmii_to_gmii.v)
 
 
 
