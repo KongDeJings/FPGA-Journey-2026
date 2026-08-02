@@ -22,7 +22,48 @@
 
 ## 文件说明
 -   `RTL/`：核心 RTL 代码
--   `DOC/`：双缓冲架构设计文档、时序约束分析
+### 双缓视频项目顶层文件
+#### [双缓视频项目顶层](./RTL/camera_ddr3_hdmi/sources_1/top/ov5640_ddr3_hdmi.v")
+
+
+### OV5640摄像头初始化
+#### [gmii转rgmii](./RTL/Ethernet.srcs/sources_1/gmii_rgmii_transfer/gmii_to_rgmii.v)
+#### [rgmii转gmii](./RTL/Ethernet.srcs/sources_1/gmii_rgmii_transfer/rgmii_to_gmii.v)
+
+
+### 接收模块
+#### [以太网协议栈接收顶层](./RTL/Ethernet.srcs/sources_1/ethernet_rx/ethernet_rx_top.v)
+##### [MAC头接收](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/mac_rx_engine.v)
+##### [ARP接收](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/arp_rx_engine.v)
+##### [IP头接收](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/ip_rx_engine.v)
+##### [ICMP接收](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/icmp_rx_engine.v)
+##### [UDP接收](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/udp_rx_engine.v)
+##### [ARP回复控制](./RTL/Ethernet.srcs/sources_1/ethernet_rx/arp_cache_requester/arp_cache.v)
+
+
+### 发送模块
+#### [以太网协议栈发送顶层](./RTL/Ethernet.srcs/sources_1/ethernet_tx/ethernet_tx_top.v)
+#### [以太网协议栈源端发送仲裁](./RTL/Ethernet.srcs/sources_1/ethernet_tx/ethernet_tx_scheduler.v)
+##### [ARP发送](./RTL/Ethernet.srcs/sources_1/ethernet_tx/main_module/arp_tx_engine.v)
+##### [ICMP发送](./RTL/Ethernet.srcs/sources_1/ethernet_tx/main_module/icmp_tx_engine.v)
+##### [UDP发送](./RTL/Ethernet.srcs/sources_1/ethernet_tx/main_module/udp_tx_engine.v)
+
+### CRC计算
+#### [并行CRC计算模块](./RTL/Ethernet.srcs/sources_1/checksum_crc/crc32/crc32.v)
+#### [CRC计算控制模块](./RTL/Ethernet.srcs/sources_1/checksum_crc/crc32/eth_crc32_parallel.v)
+
+### checksum计算
+#### [ICMP checksum串行移位计算](./RTL/Ethernet.srcs/sources_1/checksum_crc/icmp_checksum/icmp_checksum.v)
+#### [IP checksum5级流水线并行计算](./RTL/Ethernet.srcs/sources_1/checksum_crc/ip_checksum/ip_checksum_pipeline.v)
+
+### PHY初始化（未使用MDIO初始化PHY，但我保留了下来）
+#### [MDIO底层读写基本操作单元](./RTL/Ethernet.srcs/sources_1/phy_init/mdio_shift_bit.v)
+#### [PHY上电初始化复位管理](./RTL/Ethernet.srcs/sources_1/phy_init/phy_init_ctrl.v)
+
+### 仿真文件文件夹
+#### [以太网协议栈所有代码的仿真测试文件](./RTL/Ethernet.srcs/sim_1)
+
+
 -   `IMAGES/`：上板稳定画面照片、双缓冲架构设计图、时钟树及复位树图
 
 
