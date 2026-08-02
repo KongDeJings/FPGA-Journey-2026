@@ -5,8 +5,8 @@
 ### **视频缓存架构图**
 ![视频缓存架构图](./IMAGES/视频缓存项目（双缓）.png)
 
-#### [时钟架构图](.\IMAGES\视频缓存项目复位架构.png)
-#### [复位架构图](.\IMAGES\视频缓存项目时钟域架构图.png)
+#### [时钟架构图](./IMAGES/视频缓存项目复位架构.png)
+#### [复位架构图](./IMAGES/视频缓存项目时钟域架构图.png)
 
 
 
@@ -35,7 +35,7 @@
 
 ### 摄像头初始化及数据捕获相关文件
 #### [SCCB初始化顶层控制文件](./RTL/camera_ddr3_hdmi/sources_1/camera/sccb_master/sccb_master.v)
-#### [IIC 5 种最小操作状态机](./RTL/camera_ddr3_hdmi/sources_1/camera/sccb_master/iic_bit_shift.v)
+#### [IIC 基本操作产生模块](./RTL/camera_ddr3_hdmi/sources_1/camera/sccb_master/iic_bit_shift.v)
 #### [IIC协议拼接](./RTL/camera_ddr3_hdmi/sources_1/camera/sccb_master/iic_control.v)
 #### [OV5640摄像头初始化ROM表](./RTL/camera_ddr3_hdmi/sources_1/camera/sccb_master/ov5640_init_table_jpeg.v)
 #### [OV5640摄像头初始化ROM表](./RTL/camera_ddr3_hdmi/sources_1/camera/sccb_master/ov5640_init_table_rgb.v)
