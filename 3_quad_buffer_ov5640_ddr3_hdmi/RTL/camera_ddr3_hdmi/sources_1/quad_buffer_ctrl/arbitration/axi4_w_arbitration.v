@@ -1,0 +1,98 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: KongDeJing
+// 
+// Create Date: 2026/08/01 09:04:08
+// Design Name: 
+// Module Name: axi4_w_arbitration
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:camera写入的优先级大于P
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module axi4_w_arbitration(
+    // ==================== 全局信号 ====================
+    input                               ui_clk                     ,
+    input                               reset                      ,
+    // ==================== P模块写 ====================    
+    input                               p_w_req                    ,// 电平req，外部保持到start产生后下一拍
+    input                               p_w_busy                   ,// 发送模块忙指示
+    // ==================== camera模块写 ====================  
+    input                               camera_w_req                 ,// 电平req，外部保持到start产生后下一拍
+    input                               camera_w_busy                ,// 发送模块忙指示
+    // ===================  最终仲裁逻辑信号输出 ====================   
+    output reg                          p_w_start_pulse            ,
+    output reg                          camera_w_start_pulse          
+
+    );
+//===============================================================================================================   
+// 内部信号定义
+wire                                arb_enable;      // 仲裁使能：所有写通道都不忙时才允许发起新事务
+// 独热码仲裁结果：  
+// 2'b00:idle         
+// 2'b01:P 写       
+// 2'b10:Camera 写      
+reg  [1:0]                          grant;
+reg  [1:0]                          grant_dly;
+reg  [1:0]                          current_grant;
+
+//===================================================
+assign arb_enable = ~(p_w_busy || camera_w_busy);
+
+//===================================================
+// 组合逻辑仲裁：按优先级顺序扫描req,   camera -> p
+always @(*) begin
+    grant = 2'b00;  // 默认无授权
+    if (arb_enable) begin
+        if (camera_w_req) begin
+            grant = 2'b10;
+        end
+        else if (p_w_req) begin
+            grant = 2'b01;
+        end
+    end
+end
+
+//===================================================
+// 仲裁结果打一拍，用于生成单周期start脉冲
+always @(posedge ui_clk or posedge reset) begin
+    if (reset) begin
+        grant_dly <= 2'b00;
+    end else begin
+        grant_dly <= grant;
+    end
+end
+
+//===================================================
+// 生成单周期start脉冲：上升沿检测逻辑
+always @(posedge ui_clk or posedge reset) begin                                        
+    if (reset) begin
+        p_w_start_pulse      <= 1'b0;
+        camera_w_start_pulse <= 1'b0;
+    end                                                                          
+    else begin
+        p_w_start_pulse      <= grant[0] && ~grant_dly[0];
+        camera_w_start_pulse <= grant[1] && ~grant_dly[1];
+    end                                          
+end       
+//===================================================
+// 调试信号：锁存当前授权通道，仿真时直接观察
+always @(posedge ui_clk or posedge reset) begin
+    if (reset) begin
+        current_grant <= 2'b00;
+    end else begin
+        current_grant <= grant;
+    end
+end
+
+endmodule

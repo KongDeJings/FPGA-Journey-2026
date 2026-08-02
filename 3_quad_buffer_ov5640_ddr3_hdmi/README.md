@@ -15,6 +15,73 @@
 
 P模块是两组之间的唯一桥梁：它从 `in_buf` 读取原始帧，处理后将结果写入 `proc_buf`。
 
+
+## 当前状态与文件说明
+
+## 文件说明
+-   `RTL/`：核心 RTL 代码
+### 四缓视频项目顶层文件
+#### [四缓视频项目顶层](./RTL/camera_ddr3_hdmi/sources_1/top/ov5640_ddr3_hdmi.v)
+
+### 摄像头初始化及数据捕获相关文件
+#### [SCCB初始化顶层控制文件](./RTL/camera_ddr3_hdmi/sources_1/camera/sccb_master/sccb_master.v)
+#### [IIC 基本操作产生模块](./RTL/camera_ddr3_hdmi/sources_1/camera/sccb_master/iic_bit_shift.v)
+#### [IIC协议拼接](./RTL/camera_ddr3_hdmi/sources_1/camera/sccb_master/iic_control.v)
+#### [OV5640摄像头初始化ROM表](./RTL/camera_ddr3_hdmi/sources_1/camera/sccb_master/ov5640_init_table_jpeg.v)
+#### [OV5640摄像头初始化ROM表](./RTL/camera_ddr3_hdmi/sources_1/camera/sccb_master/ov5640_init_table_rgb.v)
+#### [摄像头频率帧率监控】](./RTL/camera_ddr3_hdmi/sources_1/camera/camera_monitor.v)
+#### [DVP接口转FIFO数据输入](./RTL/camera_ddr3_hdmi/sources_1/camera/dvp_capture.v)
+
+
+### HDMI输出驱动
+#### [HDMI输出顶层](./RTL/camera_ddr3_hdmi/sources_1/hdmi_over_dvi_driver/hdmi_driver.v)
+#### [VGA转HDMI](./RTL/camera_ddr3_hdmi/sources_1/hdmi_over_dvi_driver/hdmi_over_dvi_encode.v)
+#### [TMDS编码](./RTL/camera_ddr3_hdmi/sources_1/hdmi_over_dvi_driver/tmds_encode.v)
+#### [VGA接口时序产生](./RTL/camera_ddr3_hdmi/sources_1/hdmi_over_dvi_driver/vga_ctrl.v)
+
+
+### 缓冲切换控制及AXI4总线仲裁
+#### [四缓冲切换逻辑](./RTL/camera_ddr3_hdmi/sources_1/quad_buffer_ctrl/quad_buffer_ctrl.v)
+#### [HDMI与P_r的读仲裁](.RTL/camera_ddr3_hdmi/sources_1/quad_buffer_ctrl/arbitration/axi4_r_arbitration.v)
+#### [CAMERA与P_w的写仲裁](./RTL/camera_ddr3_hdmi/sources_1/quad_buffer_ctrl/arbitration/axi4_w_arbitration.v)
+
+
+
+### 摄像头写入（W模块）
+#### [W模块顶层](./RTL/camera_ddr3_hdmi/sources_1/quad_buffer_ctrl/W_module/w_module_ctrl.v)
+#### [W模块的fifo转AXI模块](./RTL/camera_ddr3_hdmi/sources_1/quad_buffer_ctrl/W_module/cam_w_fifo_to_axi4.v)
+
+
+### 基于Sobel算法的P模块（P模块）
+#### [P模块顶层](./RTL/camera_ddr3_hdmi/sources_1/quad_buffer_ctrl/P_module/p_module_ctrl.v)
+#### [P模块的AXI4转FIFO模块](./RTL/camera_ddr3_hdmi/sources_1/quad_buffer_ctrl/P_module/proc_r_axi4_to_fifo.v)
+#### [模块的输入数据处理，添加HS/VS](./RTL/camera_ddr3_hdmi/sources_1/quad_buffer_ctrl/P_module/pixel_count_request_ctrl.v)
+#### [RGB转灰度](./RTL/camera_ddr3_hdmi/sources_1/quad_buffer_ctrl/P_module/rgb_2_gray.v)
+#### [基于RAM的三行像素移位缓存](./RTL/camera_ddr3_hdmi/sources_1/quad_buffer_ctrl/P_module/image_line_shift_cache.v)
+#### [sobel计算逻辑](./RTL/camera_ddr3_hdmi/sources_1/quad_buffer_ctrl/P_module/sobel_calculate.v)
+#### [灰度转RGB](./RTL/camera_ddr3_hdmi/sources_1/quad_buffer_ctrl/P_module/gray_2_rgb.v)
+#### [处理完数据写入控制模块](./RTL/camera_ddr3_hdmi/sources_1/quad_buffer_ctrl/P_module/pixel_count_write_ctrl.v)
+#### [P模块的fifo转AXI模块](./RTL/camera_ddr3_hdmi/sources_1/quad_buffer_ctrl/P_module/proc_w_fifo_to_axi4.v)
+
+
+
+### HDMI读取（R模块）
+#### [R模块顶层](./RTL/camera_ddr3_hdmi/sources_1/quad_buffer_ctrl/R_module/r_module_ctrl.v)
+#### [R模块的AXI4转FIFO模块](./RTL/camera_ddr3_hdmi/sources_1/quad_buffer_ctrl/R_module/hdmi_r_axi4_to_fifo.v)
+
+
+### 仿真文件
+#### [仿真特制顶层](./RTL/camera_ddr3_hdmi/sources_1/top/ov5640_ddr3_hdmi_testbench.v)
+#### [P模块仿真特制顶层](/RTL/camera_ddr3_hdmi/sources_1/new/p_module_ctrl_test.v)
+#### [仿真文件](/RTL/camera_ddr3_hdmi/sim_1/ov5640_ddr3_hdmi_tb.v)
+FIFO
+### 约束文件
+#### [00_pinout.xdc](./RTL/camera_ddr3_hdmi/constrs_1/00_pinout.xdc)
+#### [01_clocks.xdc](./RTL/camera_ddr3_hdmi/constrs_1/01_clocks.xdc)
+#### [02_input_output.xdc](./RTL/camera_ddr3_hdmi/constrs_1/02_input_output.xdc)
+#### [03_cdc.xdc](./RTL/camera_ddr3_hdmi/constrs_1/03_cdc.xdc)
+#### [04_exceptions.xdc](./RTL/camera_ddr3_hdmi/constrs_1/04_exceptions.xdc)
+
 ## Buffer 状态模型
 
 每个Buffer在任意时刻处于三种互斥状态之一：
@@ -44,7 +111,7 @@ P模块是两组之间的唯一桥梁：它从 `in_buf` 读取原始帧，处理
 -   **多主控互联**：基于AXI SmartConnect实现三个独立Master对单一DDR3的并发访问。
 -   **多速率兼容**：自动适配Camera 30fps、HDMI 60fps的速率差异及P模块的可变处理速率。
 
-## 空载测试记录
+## 调试与升级记录
 
 ### 测试目标
 
@@ -60,9 +127,4 @@ P模块是两组之间的唯一桥梁：它从 `in_buf` 读取原始帧，处理
 -   已排除：MIG DDR3控制器本身（此前纯RTL直连版本验证通过）
 -   **初步定位**：问题出在 AXI SmartConnect 的配置或多主控数据同步上。SmartConnect在仲裁两个Master（Camera写、HDMI读）的并发请求时，可能存在地址映射、ID路由或响应通道的数据错位问题。此问题暂未解决，但不影响四缓冲控制器自身的逻辑正确性。
 
-## 当前状态与文件说明
 
--   **状态**：RTL设计及核心状态机编写已完成，正在集成验证中。
--   **文件**：
-    -   `RTL/`：核心RTL代码
-    -   `IMAGES/`：架构设计图
