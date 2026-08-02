@@ -5,6 +5,14 @@
 ### **视频缓存架构图**
 ![视频缓存架构图](./IMAGES/视频缓存项目（双缓）.png)
 
+#### [时钟架构图](.\IMAGES\视频缓存项目复位架构.png)
+#### [复位架构图](.\IMAGES\视频缓存项目时钟域架构图.png)
+
+
+
+
+
+
 ## 关键成果
 -   **画面稳定无撕裂**：通过双缓冲乒乓操作，彻底解决单缓存读写冲突导致的画面撕裂。
 -   **时序收敛**：编写全工程时序约束，将 WNS 从 -3.6 ns 优化至 +0.99 ns。
@@ -23,51 +31,43 @@
 ## 文件说明
 -   `RTL/`：核心 RTL 代码
 ### 双缓视频项目顶层文件
-#### [双缓视频项目顶层](./RTL/camera_ddr3_hdmi/sources_1/top/ov5640_ddr3_hdmi.v")
+#### [双缓视频项目顶层](./RTL/camera_ddr3_hdmi/sources_1/top/ov5640_ddr3_hdmi.v)
+
+### 摄像头初始化及数据捕获相关文件
+#### [SCCB初始化顶层控制文件](./RTL/camera_ddr3_hdmi/sources_1/camera/sccb_master/sccb_master.v)
+#### [IIC 5 种最小操作状态机](./RTL/camera_ddr3_hdmi/sources_1/camera/sccb_master/iic_bit_shift.v)
+#### [IIC协议拼接](./RTL/camera_ddr3_hdmi/sources_1/camera/sccb_master/iic_control.v)
+#### [OV5640摄像头初始化ROM表](./RTL/camera_ddr3_hdmi/sources_1/camera/sccb_master/ov5640_init_table_jpeg.v)
+#### [OV5640摄像头初始化ROM表](./RTL/camera_ddr3_hdmi/sources_1/camera/sccb_master/ov5640_init_table_rgb.v)
+#### [摄像头频率帧率监控】](./RTL/camera_ddr3_hdmi/sources_1/camera/camera_monitor.v)
+#### [DVP接口转FIFO数据输入](./RTL/camera_ddr3_hdmi/sources_1/camera/dvp_capture.v)
 
 
-### OV5640摄像头初始化
-#### [gmii转rgmii](./RTL/Ethernet.srcs/sources_1/gmii_rgmii_transfer/gmii_to_rgmii.v)
-#### [rgmii转gmii](./RTL/Ethernet.srcs/sources_1/gmii_rgmii_transfer/rgmii_to_gmii.v)
+### 缓冲区切换及协议转换
+#### [双缓冲切换控制](./RTL/camera_ddr3_hdmi/sources_1/ddr3_ctrl_2port/ddr3_double_buffer_ctrl.v)
+#### [DDR3读写顶层](./RTL/camera_ddr3_hdmi/sources_1/ddr3_ctrl_2port/ddr3_ctrl_2port.v)
+#### [FIFO与AXI4互转模块封装](./RTL/camera_ddr3_hdmi/sources_1/ddr3_ctrl_2port/fifo_axi4_adapter.v)
+#### [AXI4转FIFO数据读取](./RTL/camera_ddr3_hdmi/sources_1/ddr3_ctrl_2port/axi4_to_fifo.v)
+#### [FIFO转AXI4数据写入](./RTL/camera_ddr3_hdmi/sources_1/ddr3_ctrl_2port/fifo_to_axi4.v)
 
 
-### 接收模块
-#### [以太网协议栈接收顶层](./RTL/Ethernet.srcs/sources_1/ethernet_rx/ethernet_rx_top.v)
-##### [MAC头接收](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/mac_rx_engine.v)
-##### [ARP接收](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/arp_rx_engine.v)
-##### [IP头接收](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/ip_rx_engine.v)
-##### [ICMP接收](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/icmp_rx_engine.v)
-##### [UDP接收](./RTL/Ethernet.srcs/sources_1/ethernet_rx/main_module/udp_rx_engine.v)
-##### [ARP回复控制](./RTL/Ethernet.srcs/sources_1/ethernet_rx/arp_cache_requester/arp_cache.v)
+### HDMI输出驱动
+#### [HDMI输出顶层](./RTL/camera_ddr3_hdmi/sources_1/hdmi_over_dvi_driver/hdmi_driver.v)
+#### [VGA转HDMI](./RTL/camera_ddr3_hdmi/sources_1/hdmi_over_dvi_driver/hdmi_over_dvi_encode.v)
+#### [TMDS编码](./RTL/camera_ddr3_hdmi/sources_1/hdmi_over_dvi_driver/tmds_encode.v)
+#### [VGA接口时序产生](./RTL/camera_ddr3_hdmi/sources_1/hdmi_over_dvi_driver/vga_ctrl.v)
 
 
-### 发送模块
-#### [以太网协议栈发送顶层](./RTL/Ethernet.srcs/sources_1/ethernet_tx/ethernet_tx_top.v)
-#### [以太网协议栈源端发送仲裁](./RTL/Ethernet.srcs/sources_1/ethernet_tx/ethernet_tx_scheduler.v)
-##### [ARP发送](./RTL/Ethernet.srcs/sources_1/ethernet_tx/main_module/arp_tx_engine.v)
-##### [ICMP发送](./RTL/Ethernet.srcs/sources_1/ethernet_tx/main_module/icmp_tx_engine.v)
-##### [UDP发送](./RTL/Ethernet.srcs/sources_1/ethernet_tx/main_module/udp_tx_engine.v)
+### 仿真文件
+#### [仿真特制顶层](./RTL/simulation_project/camera_ddr3_hdmi.srcs/sources_1/top/ov5640_ddr3_hdmi.v)
+#### [仿真文件](./RTL/simulation_project/camera_ddr3_hdmi.srcs/sim_1/new/ov5640_ddr3_hdmi_tb.v)
 
-### CRC计算
-#### [并行CRC计算模块](./RTL/Ethernet.srcs/sources_1/checksum_crc/crc32/crc32.v)
-#### [CRC计算控制模块](./RTL/Ethernet.srcs/sources_1/checksum_crc/crc32/eth_crc32_parallel.v)
-
-### checksum计算
-#### [ICMP checksum串行移位计算](./RTL/Ethernet.srcs/sources_1/checksum_crc/icmp_checksum/icmp_checksum.v)
-#### [IP checksum5级流水线并行计算](./RTL/Ethernet.srcs/sources_1/checksum_crc/ip_checksum/ip_checksum_pipeline.v)
-
-### PHY初始化（未使用MDIO初始化PHY，但我保留了下来）
-#### [MDIO底层读写基本操作单元](./RTL/Ethernet.srcs/sources_1/phy_init/mdio_shift_bit.v)
-#### [PHY上电初始化复位管理](./RTL/Ethernet.srcs/sources_1/phy_init/phy_init_ctrl.v)
-
-### 仿真文件文件夹
-#### [以太网协议栈所有代码的仿真测试文件](./RTL/Ethernet.srcs/sim_1)
-
-
--   `IMAGES/`：上板稳定画面照片、双缓冲架构设计图、时钟树及复位树图
-
-
-
+### 约束文件
+#### [00_pinout.xdc](./RTL/camera_ddr3_hdmi/constrs_1/00_pinout.xdc)
+#### [01_clocks.xdc](./RTL/camera_ddr3_hdmi/constrs_1/01_clocks.xdc)
+#### [02_input_output.xdc](./RTL/camera_ddr3_hdmi/constrs_1/02_input_output.xdc)
+#### [03_cdc.xdc](./RTL/camera_ddr3_hdmi/constrs_1/03_cdc.xdc)
+#### [04_exceptions.xdc](./RTL/camera_ddr3_hdmi/constrs_1/04_exceptions.xdc)
 
 
 
