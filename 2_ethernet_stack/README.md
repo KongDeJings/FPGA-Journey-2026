@@ -46,7 +46,11 @@
 
 ## 文件说明
 
--   `RTL/`：核心RTL代码（按MAC/IP/UDP/ICMP/ARP分层组织）
+-   `RTL/`：核心RTL代码
+![以太网协议栈顶层](./RTL/Ethernet.srcs/sources_1/ethernet_top.v)
+
+
+
 -   `IMAGES/`：Wireshark验证截图、ILA调试截图、以太网架构图
 
   
