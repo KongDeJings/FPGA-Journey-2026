@@ -42,7 +42,7 @@ P模块是两组之间的唯一桥梁：它从 `in_buf` 读取原始帧，处理
 
 ### 缓冲切换控制及AXI4总线仲裁
 #### [四缓冲切换逻辑](./RTL/camera_ddr3_hdmi/sources_1/quad_buffer_ctrl/quad_buffer_ctrl.v)
-#### [HDMI与P_r的读仲裁](/RTL/camera_ddr3_hdmi/sources_1/quad_buffer_ctrl/arbitration/axi4_r_arbitration.v)
+#### [HDMI与P_r的读仲裁](./RTL/camera_ddr3_hdmi/sources_1/quad_buffer_ctrl/arbitration/axi4_r_arbitration.v)
 #### [CAMERA与P_w的写仲裁](./RTL/camera_ddr3_hdmi/sources_1/quad_buffer_ctrl/arbitration/axi4_w_arbitration.v)
 
 
