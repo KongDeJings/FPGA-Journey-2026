@@ -20,7 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module axi4_w_arbitration(
+module axi4_w_arbitration
+#(
+    parameter SECOND_JUDGE_WINDOW = 10
+)
+
+(
     // ==================== 全局信号 ====================
     input                               ui_clk                     ,
     input                               reset                      ,
@@ -73,18 +78,7 @@ always @(posedge ui_clk or posedge reset) begin
     end
 end
 
-//===================================================
-// 生成单周期start脉冲：上升沿检测逻辑
-always @(posedge ui_clk or posedge reset) begin                                        
-    if (reset) begin
-        p_w_start_pulse      <= 1'b0;
-        camera_w_start_pulse <= 1'b0;
-    end                                                                          
-    else begin
-        p_w_start_pulse      <= grant[0] && ~grant_dly[0];
-        camera_w_start_pulse <= grant[1] && ~grant_dly[1];
-    end                                          
-end       
+
 //===================================================
 // 调试信号：锁存当前授权通道，仿真时直接观察
 always @(posedge ui_clk or posedge reset) begin
@@ -95,4 +89,81 @@ always @(posedge ui_clk or posedge reset) begin
     end
 end
 
+
+//===================================================
+// 生成一次仲裁结果暂存
+reg [$clog2(SECOND_JUDGE_WINDOW)-1:0] cnt;
+reg p_w_start_hold      ;
+reg camera_w_start_hold ;
+
+always @(posedge ui_clk or posedge reset) begin                                        
+    if (reset) 
+        p_w_start_hold      <= 1'b0;                                                           
+    else if(cnt==SECOND_JUDGE_WINDOW-1)    
+        p_w_start_hold      <= 1'b0;      
+    else if(grant[0] && ~grant_dly[0])
+        p_w_start_hold      <= 1'b1;
+    else
+        p_w_start_hold      <= p_w_start_hold;        
+end    
+
+always @(posedge ui_clk or posedge reset) begin                                        
+    if (reset) 
+        camera_w_start_hold      <= 1'b0;                                                           
+    else if(cnt==SECOND_JUDGE_WINDOW-1)    
+        camera_w_start_hold      <= 1'b0;      
+    else if(grant[1] && ~grant_dly[1])
+        camera_w_start_hold      <= 1'b1;
+    else
+        camera_w_start_hold      <= camera_w_start_hold;        
+end
+
+
+//===================================================
+//输出端增加时间窗口，二次仲裁
+
+
+always @(posedge ui_clk or posedge reset) begin                                        
+    if (reset) begin
+        cnt<=0;
+    end                                                                          
+    else if (cnt==SECOND_JUDGE_WINDOW-1)     
+        cnt<=0; 
+    else if( p_w_start_hold||camera_w_start_hold)
+        cnt<=cnt+1;
+    else
+        cnt<=0;
+end     
+
+//二次仲裁逻辑
+always @(posedge ui_clk or posedge reset) begin                                        
+    if (reset) begin
+        p_w_start_pulse      <=0;
+        camera_w_start_pulse <=0;
+    end                                                                          
+    else if (cnt==SECOND_JUDGE_WINDOW-2) begin
+        case ({p_w_start_hold,camera_w_start_hold})
+            2'b11:begin
+                p_w_start_pulse      <=0;
+                camera_w_start_pulse <=1;                
+            end
+            2'b10:begin
+                p_w_start_pulse      <=1;
+                camera_w_start_pulse <=0;                
+            end
+            2'b01:begin
+                p_w_start_pulse      <=0;
+                camera_w_start_pulse <=1;                 
+            end 
+            default: begin
+                p_w_start_pulse      <=0;
+                camera_w_start_pulse <=0;                
+            end
+        endcase
+    end    
+    else begin
+        p_w_start_pulse      <=0;
+        camera_w_start_pulse <=0;
+    end
+end  
 endmodule

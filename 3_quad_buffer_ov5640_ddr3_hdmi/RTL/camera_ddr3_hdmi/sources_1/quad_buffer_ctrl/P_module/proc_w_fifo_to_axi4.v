@@ -113,12 +113,16 @@ module proc_w_fifo_to_axi4
 
     reg                  [   4: 0]      current_state              ;
     reg                  [   4: 0]      next_state                 ;
-    localparam                          S_IDLE                      = 5'b00001,
-                                        S_WR_ADDR                   = 5'b00010,
-                                        S_WR_DATA_PRE               = 5'b00100,
-                                        S_WR_DATA                   = 5'b01000,
-                                        S_WR_RESP                   = 5'b10000;
-
+    localparam                          S_IDLE                      = 1,
+                                        S_WR_ADDR                   =2 ,
+                                        S_WR_DATA_PRE               = 3,
+                                        S_WR_DATA                   = 4,
+                                        S_WR_RESP                   =5 ;
+//5'b00001
+//5'b00010
+//5'b00100
+//5'b01000
+//5'b10000
 //本地参数及接口定义、连线
     wire    [$clog2((AXI_BURST_LEN + 1) ): 0]  wr_req_cnt_thresh          ;//写请求计数器阈值信号
     reg                                 fifo_rddata_valid          ;//fifo数据有效信号，这个信号延后于fifo_rddata一拍
@@ -194,7 +198,6 @@ always @(*) begin
     endcase
 end
 
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ==================== 第三段：输出逻辑 ====================
 //////////////////////////////////////////////////////////////////////////////////
@@ -251,6 +254,45 @@ reg [2:0]w_brust_complete_r;
                 w_brust_complete_r[2]<=w_brust_complete_r[1];    
             end                                    
         end     
+
+
+
+
+
+//================================================================================
+//
+reg stop_sing;
+    reg     [$clog2(BURST_COUNT)-1: 0]  w_burst_done_cnt_reg           ;// 已完成的读突发数
+    always @(posedge clk or posedge reset)           
+        begin                                        
+            if(reset)                               
+                w_burst_done_cnt_reg<=4000;                                                                       
+            else if(p_w_start_pulse)     
+                w_burst_done_cnt_reg<=w_burst_done_cnt;                         
+        end         
+
+    always @(posedge clk or posedge reset)           
+        begin                                        
+            if(reset)                               
+                stop_sing<=0;                                                                       
+            else if(p_w_start_pulse)     
+                stop_sing<=(w_burst_done_cnt==w_burst_done_cnt_reg);                         
+        end     
+
+
+ila_0 your_instance_name (
+    .clk                                (clk                       ),// input wire clk
+
+
+    .probe0                             (w_burst_done_cnt          ),// input wire [11:0]  probe0  
+    .probe1                             (stop_sing              ),// input wire [0:0]  probe1 
+    .probe2                             (w_brust_complete          ),// input wire [0:0]  probe2 
+    .probe3                             (p_w_burst_done            ),// input wire [0:0]  probe3 
+    .probe4                             (w_addr_switch_pulse       ),// input wire [0:0]  probe4 
+    .probe5                             ({p_w_start_pulse,p_module_ddr3_w_req}),// input wire [1:0]  probe5 
+    .probe6                             (m_axi_bid                 ),// input wire [3:0]  probe6 
+    .probe7                             (current_state             ) // input wire [4:0]  probe7
+);
 
 //================================================================================
 //根据地址切换信号，动态更新地址

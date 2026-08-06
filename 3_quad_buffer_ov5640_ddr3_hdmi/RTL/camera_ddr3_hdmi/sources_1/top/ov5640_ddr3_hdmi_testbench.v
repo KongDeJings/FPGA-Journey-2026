@@ -451,11 +451,11 @@ always @(posedge mig_ui_clk or posedge ui_clk_sync_rst) begin
         m_axi_wdata_dynamic    <= {AXI_DATA_WIDTH{1'b0}};
         m_axi_wlast_dynamic    <= 1'b0;
         m_axi_wvalid_dynamic   <= 1'b0;
-        s_axi_bready_dynamic   <= 1'b0;
+        s_axi_bready_dynamic   <= s_axi_bready_dynamic;
     end
 end
 
-//=================================================axi4_r_channel_switch
+
 //=================================================axi4_r_channel_switch
 always @(posedge mig_ui_clk or posedge ui_clk_sync_rst) begin
     if (ui_clk_sync_rst) begin
@@ -480,7 +480,7 @@ always @(posedge mig_ui_clk or posedge ui_clk_sync_rst) begin
         m_axi_arid_dynamic     <= {AXI_ID_WIDTH{1'b0}};
         m_axi_araddr_dynamic   <= {AXI_ADDR_WIDTH{1'b0}};
         m_axi_arvalid_dynamic  <= 1'b0;
-        m_axi_rready_dynamic   <= 1'b0;
+        m_axi_rready_dynamic   <= m_axi_rready_dynamic;
     end
 end
 //===============================================================================================================
@@ -820,6 +820,7 @@ p_module_ctrl#(
 
     .clk                                (mig_ui_clk                ),// (input)// 处理时钟
     .reset                              (ui_clk_sync_rst           ),// (input)// 高有效复位
+    .p_bypass                           (1                         ),// (input)//用以旁路P模块的图像处理功能，1时旁路
 // ==================== 写地址通道 ====================
     .m_axi_p_awid                       (m_axi_p_awid              ),// (output)
     .m_axi_p_awaddr                     (m_axi_p_awaddr            ),// (output)

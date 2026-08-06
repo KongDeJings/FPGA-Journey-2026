@@ -79,12 +79,12 @@ module proc_r_axi4_to_fifo
     input                [   1: 0]      m_axi_rresp                ,
     input                               m_axi_rlast                ,
     input                               m_axi_rvalid               ,
-    output                              m_axi_rready               ,
+    output reg                          m_axi_rready               ,
 
     //==================== 实验接口 ====================
     output                              r_done                     ,
     input                               rd_enable                  ,
-    output                              p_module_ddr3_r_req        ,
+    output  reg                         p_module_ddr3_r_req        ,
     input                               p_r_start_pulse            ,
     output reg                          p_r_burst_done             ,
     // ==================== 双帧缓存切换逻辑信号 ====================
@@ -167,7 +167,12 @@ end
 
 
 //=========================m_axi_rready信号怎么产生=======================================//
- assign m_axi_rready  = ~fifo_alfull;    //当fifo将要满时，代表fifo中有足够的数据可以读取，此时“ready”较为合适
+always @(posedge clk or posedge reset) begin
+    if (reset)
+        m_axi_rready <= 0;
+    else if (~fifo_alfull)
+        m_axi_rready <= 1;
+end
  //assign m_axi_rready  = 1'b1;
 
 //=========================产生帧激活信号frame_active======================================//
@@ -183,8 +188,21 @@ end
 //=========================产生ddr3开始读信号======================================//
 assign rd_req_cnt_thresh = FIFO_SAFE_THRESHOLD[FIFO_ADDR_WIDTH-1:0]; //如果fifo中数据的量大于这个量，那么fifo中剩余的空间就不支持再读一次DDR3了
 //目的：保证读 DDR 之前，FIFO 一定有足够空间装下整段突发，绝不溢出！
-assign p_module_ddr3_r_req = (fifo_wr_cnt < rd_req_cnt_thresh - 2) && frame_active;
 
+always @(posedge clk or posedge reset) begin
+    if (reset)
+        p_module_ddr3_r_req <= 0;
+    else if ((fifo_wr_cnt < rd_req_cnt_thresh - 2) && frame_active)begin
+        if(r_done)
+        p_module_ddr3_r_req <= 0;
+        else if(rd_enable) 
+        p_module_ddr3_r_req <= 1;    
+        else
+        p_module_ddr3_r_req <=   p_module_ddr3_r_req;        
+    end
+    else
+        p_module_ddr3_r_req <=   p_module_ddr3_r_req;        
+end
 //================================================================================
 //通过计数读突发次数，来标定一帧信号结束
 reg [($clog2(BURST_COUNT)-1):0] rd_burst_done_cnt;           // 已完成的读突发数
@@ -280,12 +298,16 @@ end
         if(reset)
             fifo_wrreq <= 1'b0;
         else
-            fifo_wrreq <= m_axi_rvalid & m_axi_rready&&frame_active;
+            fifo_wrreq <= m_axi_rvalid && m_axi_rready&&frame_active &&(m_axi_rid==AXI_ID);
         end
 
     always @(posedge clk) begin
-        if(m_axi_rvalid && m_axi_rready&&frame_active)
+        if(reset)
+            fifo_wrdata <= 0;        
+        else if(m_axi_rvalid && m_axi_rready&&frame_active&&(m_axi_rid==AXI_ID))
             fifo_wrdata <= m_axi_rdata;
         end
+
+
         
 endmodule

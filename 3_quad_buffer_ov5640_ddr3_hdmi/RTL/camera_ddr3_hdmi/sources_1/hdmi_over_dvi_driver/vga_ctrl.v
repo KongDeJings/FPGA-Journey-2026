@@ -26,10 +26,10 @@
 //`define Resolution_800x480 1       //需要的时钟：33MHz
 //`define Resolution_800x600 1       //需要的时钟：40MHz
 //`define Resolution_1024x768 1      //需要的时钟：65MHz
-// `define Resolution_1280x720 1      //需要的时钟：74.25MHz
+ `define Resolution_1280x720 1      //需要的时钟：74.25MHz
 //`define Resolution_1920x1080 1     //需要的时钟：148.5MHz
 // `define Resolution_256x4 1         //需要的时钟：无所谓，仿真专用
-`define Resolution_256x2 1        //需要的时钟：无所谓，仿真专用
+// `define Resolution_256x2 1        //需要的时钟：无所谓，仿真专用
 // `define Resolution_384x2 1
 // `define Resolution_1280x2 1
 

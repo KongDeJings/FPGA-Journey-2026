@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ov5640_ddr3_hdmi_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="ov5640_ddr3_hdmi_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="635753529000fs"></ZoomStartTime>
+      <ZoomEndTime time="1553753529001fs"></ZoomEndTime>
+      <Cursor1Time time="788753529000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="351"></NameColumnWidth>
+      <ValueColumnWidth column_width="125"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="123" />
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_awid_dynamic" type="array">
+      <obj_property name="ElementShortName">m_axi_awid_dynamic[3:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axi_awid_dynamic[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_awaddr_dynamic" type="array">
+      <obj_property name="ElementShortName">m_axi_awaddr_dynamic[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axi_awaddr_dynamic[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_awvalid_dynamic" type="logic">
+      <obj_property name="ElementShortName">m_axi_awvalid_dynamic</obj_property>
+      <obj_property name="ObjectShortName">m_axi_awvalid_dynamic</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_awready_dynamic" type="logic">
+      <obj_property name="ElementShortName">m_axi_awready_dynamic</obj_property>
+      <obj_property name="ObjectShortName">m_axi_awready_dynamic</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_wdata_dynamic" type="array">
+      <obj_property name="ElementShortName">m_axi_wdata_dynamic[127:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axi_wdata_dynamic[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_wlast_dynamic" type="logic">
+      <obj_property name="ElementShortName">m_axi_wlast_dynamic</obj_property>
+      <obj_property name="ObjectShortName">m_axi_wlast_dynamic</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_wvalid_dynamic" type="logic">
+      <obj_property name="ElementShortName">m_axi_wvalid_dynamic</obj_property>
+      <obj_property name="ObjectShortName">m_axi_wvalid_dynamic</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_wready_dynamic" type="logic">
+      <obj_property name="ElementShortName">m_axi_wready_dynamic</obj_property>
+      <obj_property name="ObjectShortName">m_axi_wready_dynamic</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_bid_dynamic" type="array">
+      <obj_property name="ElementShortName">m_axi_bid_dynamic[3:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axi_bid_dynamic[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_bresp_dynamic" type="array">
+      <obj_property name="ElementShortName">m_axi_bresp_dynamic[1:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axi_bresp_dynamic[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_bvalid_dynamic" type="logic">
+      <obj_property name="ElementShortName">m_axi_bvalid_dynamic</obj_property>
+      <obj_property name="ObjectShortName">m_axi_bvalid_dynamic</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/s_axi_bready_dynamic" type="logic">
+      <obj_property name="ElementShortName">s_axi_bready_dynamic</obj_property>
+      <obj_property name="ObjectShortName">s_axi_bready_dynamic</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_arid_dynamic" type="array">
+      <obj_property name="ElementShortName">m_axi_arid_dynamic[3:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axi_arid_dynamic[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_araddr_dynamic" type="array">
+      <obj_property name="ElementShortName">m_axi_araddr_dynamic[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axi_araddr_dynamic[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_arvalid_dynamic" type="logic">
+      <obj_property name="ElementShortName">m_axi_arvalid_dynamic</obj_property>
+      <obj_property name="ObjectShortName">m_axi_arvalid_dynamic</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_arready_dynamic" type="logic">
+      <obj_property name="ElementShortName">m_axi_arready_dynamic</obj_property>
+      <obj_property name="ObjectShortName">m_axi_arready_dynamic</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_rid_dynamic" type="array">
+      <obj_property name="ElementShortName">m_axi_rid_dynamic[3:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axi_rid_dynamic[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_rdata_dynamic" type="array">
+      <obj_property name="ElementShortName">m_axi_rdata_dynamic[127:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axi_rdata_dynamic[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_rresp_dynamic" type="array">
+      <obj_property name="ElementShortName">m_axi_rresp_dynamic[1:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axi_rresp_dynamic[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_rlast_dynamic" type="logic">
+      <obj_property name="ElementShortName">m_axi_rlast_dynamic</obj_property>
+      <obj_property name="ObjectShortName">m_axi_rlast_dynamic</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_rvalid_dynamic" type="logic">
+      <obj_property name="ElementShortName">m_axi_rvalid_dynamic</obj_property>
+      <obj_property name="ObjectShortName">m_axi_rvalid_dynamic</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/m_axi_rready_dynamic" type="logic">
+      <obj_property name="ElementShortName">m_axi_rready_dynamic</obj_property>
+      <obj_property name="ObjectShortName">m_axi_rready_dynamic</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/init_calib_complete" type="logic">
+      <obj_property name="ElementShortName">init_calib_complete</obj_property>
+      <obj_property name="ObjectShortName">init_calib_complete</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_quad_buffer_ctrl/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_quad_buffer_ctrl/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_quad_buffer_ctrl/w_done" type="logic">
+      <obj_property name="ElementShortName">w_done</obj_property>
+      <obj_property name="ObjectShortName">w_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_quad_buffer_ctrl/p_idle" type="logic">
+      <obj_property name="ElementShortName">p_idle</obj_property>
+      <obj_property name="ObjectShortName">p_idle</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_quad_buffer_ctrl/p_done" type="logic">
+      <obj_property name="ElementShortName">p_done</obj_property>
+      <obj_property name="ObjectShortName">p_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_quad_buffer_ctrl/r_done" type="logic">
+      <obj_property name="ElementShortName">r_done</obj_property>
+      <obj_property name="ObjectShortName">r_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_quad_buffer_ctrl/w_buf" type="logic">
+      <obj_property name="ElementShortName">w_buf</obj_property>
+      <obj_property name="ObjectShortName">w_buf</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_quad_buffer_ctrl/p_rd_buf" type="logic">
+      <obj_property name="ElementShortName">p_rd_buf</obj_property>
+      <obj_property name="ObjectShortName">p_rd_buf</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_quad_buffer_ctrl/p_wr_buf" type="logic">
+      <obj_property name="ElementShortName">p_wr_buf</obj_property>
+      <obj_property name="ObjectShortName">p_wr_buf</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_quad_buffer_ctrl/r_buf" type="logic">
+      <obj_property name="ElementShortName">r_buf</obj_property>
+      <obj_property name="ObjectShortName">r_buf</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_quad_buffer_ctrl/w_switch_pulse" type="logic">
+      <obj_property name="ElementShortName">w_switch_pulse</obj_property>
+      <obj_property name="ObjectShortName">w_switch_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_quad_buffer_ctrl/p_switch_pulse" type="logic">
+      <obj_property name="ElementShortName">p_switch_pulse</obj_property>
+      <obj_property name="ObjectShortName">p_switch_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_quad_buffer_ctrl/r_switch_pulse" type="logic">
+      <obj_property name="ElementShortName">r_switch_pulse</obj_property>
+      <obj_property name="ObjectShortName">r_switch_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_axi4_w_arbitration/ui_clk" type="logic">
+      <obj_property name="ElementShortName">ui_clk</obj_property>
+      <obj_property name="ObjectShortName">ui_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_axi4_w_arbitration/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_axi4_w_arbitration/p_w_req" type="logic">
+      <obj_property name="ElementShortName">p_w_req</obj_property>
+      <obj_property name="ObjectShortName">p_w_req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_axi4_w_arbitration/p_w_busy" type="logic">
+      <obj_property name="ElementShortName">p_w_busy</obj_property>
+      <obj_property name="ObjectShortName">p_w_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_axi4_w_arbitration/camera_w_req" type="logic">
+      <obj_property name="ElementShortName">camera_w_req</obj_property>
+      <obj_property name="ObjectShortName">camera_w_req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_axi4_w_arbitration/camera_w_busy" type="logic">
+      <obj_property name="ElementShortName">camera_w_busy</obj_property>
+      <obj_property name="ObjectShortName">camera_w_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_axi4_w_arbitration/p_w_start_pulse" type="logic">
+      <obj_property name="ElementShortName">p_w_start_pulse</obj_property>
+      <obj_property name="ObjectShortName">p_w_start_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_axi4_w_arbitration/camera_w_start_pulse" type="logic">
+      <obj_property name="ElementShortName">camera_w_start_pulse</obj_property>
+      <obj_property name="ObjectShortName">camera_w_start_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_axi4_w_arbitration/arb_enable" type="logic">
+      <obj_property name="ElementShortName">arb_enable</obj_property>
+      <obj_property name="ObjectShortName">arb_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_axi4_r_arbitration/ui_clk" type="logic">
+      <obj_property name="ElementShortName">ui_clk</obj_property>
+      <obj_property name="ObjectShortName">ui_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_axi4_r_arbitration/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_axi4_r_arbitration/p_r_req" type="logic">
+      <obj_property name="ElementShortName">p_r_req</obj_property>
+      <obj_property name="ObjectShortName">p_r_req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_axi4_r_arbitration/p_r_busy" type="logic">
+      <obj_property name="ElementShortName">p_r_busy</obj_property>
+      <obj_property name="ObjectShortName">p_r_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_axi4_r_arbitration/hdmi_r_req" type="logic">
+      <obj_property name="ElementShortName">hdmi_r_req</obj_property>
+      <obj_property name="ObjectShortName">hdmi_r_req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_axi4_r_arbitration/hdmi_r_busy" type="logic">
+      <obj_property name="ElementShortName">hdmi_r_busy</obj_property>
+      <obj_property name="ObjectShortName">hdmi_r_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_axi4_r_arbitration/p_r_start_pulse" type="logic">
+      <obj_property name="ElementShortName">p_r_start_pulse</obj_property>
+      <obj_property name="ObjectShortName">p_r_start_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_axi4_r_arbitration/hdmi_r_start_pulse" type="logic">
+      <obj_property name="ElementShortName">hdmi_r_start_pulse</obj_property>
+      <obj_property name="ObjectShortName">hdmi_r_start_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_r_axi4_to_fifo/r_done" type="logic">
+      <obj_property name="ElementShortName">r_done</obj_property>
+      <obj_property name="ObjectShortName">r_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_r_axi4_to_fifo/rd_enable" type="logic">
+      <obj_property name="ElementShortName">rd_enable</obj_property>
+      <obj_property name="ObjectShortName">rd_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_r_axi4_to_fifo/p_module_ddr3_r_req" type="logic">
+      <obj_property name="ElementShortName">p_module_ddr3_r_req</obj_property>
+      <obj_property name="ObjectShortName">p_module_ddr3_r_req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_r_axi4_to_fifo/p_r_start_pulse" type="logic">
+      <obj_property name="ElementShortName">p_r_start_pulse</obj_property>
+      <obj_property name="ObjectShortName">p_r_start_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_r_axi4_to_fifo/p_r_burst_done" type="logic">
+      <obj_property name="ElementShortName">p_r_burst_done</obj_property>
+      <obj_property name="ObjectShortName">p_r_burst_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_r_axi4_to_fifo/r_buf" type="logic">
+      <obj_property name="ElementShortName">r_buf</obj_property>
+      <obj_property name="ObjectShortName">r_buf</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_r_axi4_to_fifo/r_addr_switch_pulse" type="logic">
+      <obj_property name="ElementShortName">r_addr_switch_pulse</obj_property>
+      <obj_property name="ObjectShortName">r_addr_switch_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_r_axi4_to_fifo/current_state" type="array">
+      <obj_property name="ElementShortName">current_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">current_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_r_axi4_to_fifo/next_state" type="array">
+      <obj_property name="ElementShortName">next_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_r_axi4_to_fifo/rd_req_cnt_thresh" type="array">
+      <obj_property name="ElementShortName">rd_req_cnt_thresh[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_req_cnt_thresh[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_r_axi4_to_fifo/frame_active" type="logic">
+      <obj_property name="ElementShortName">frame_active</obj_property>
+      <obj_property name="ObjectShortName">frame_active</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_r_axi4_to_fifo/rd_burst_done_cnt" type="array">
+      <obj_property name="ElementShortName">rd_burst_done_cnt[0:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_burst_done_cnt[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_r_axi4_to_fifo/r_brust_complete" type="logic">
+      <obj_property name="ElementShortName">r_brust_complete</obj_property>
+      <obj_property name="ObjectShortName">r_brust_complete</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_r_axi4_to_fifo/r_brust_complete_r" type="array">
+      <obj_property name="ElementShortName">r_brust_complete_r[2:0]</obj_property>
+      <obj_property name="ObjectShortName">r_brust_complete_r[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_r_axi4_to_fifo/dynamic_addr" type="array">
+      <obj_property name="ElementShortName">dynamic_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dynamic_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_w_fifo_to_axi4/p_w_done" type="logic">
+      <obj_property name="ElementShortName">p_w_done</obj_property>
+      <obj_property name="ObjectShortName">p_w_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_w_fifo_to_axi4/p_module_ddr3_w_req" type="logic">
+      <obj_property name="ElementShortName">p_module_ddr3_w_req</obj_property>
+      <obj_property name="ObjectShortName">p_module_ddr3_w_req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_w_fifo_to_axi4/p_w_start_pulse" type="logic">
+      <obj_property name="ElementShortName">p_w_start_pulse</obj_property>
+      <obj_property name="ObjectShortName">p_w_start_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_w_fifo_to_axi4/p_w_burst_done" type="logic">
+      <obj_property name="ElementShortName">p_w_burst_done</obj_property>
+      <obj_property name="ObjectShortName">p_w_burst_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_w_fifo_to_axi4/w_buf" type="logic">
+      <obj_property name="ElementShortName">w_buf</obj_property>
+      <obj_property name="ObjectShortName">w_buf</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_w_fifo_to_axi4/w_addr_switch_pulse" type="logic">
+      <obj_property name="ElementShortName">w_addr_switch_pulse</obj_property>
+      <obj_property name="ObjectShortName">w_addr_switch_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_w_fifo_to_axi4/current_state" type="array">
+      <obj_property name="ElementShortName">current_state[4:0]</obj_property>
+      <obj_property name="ObjectShortName">current_state[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_w_fifo_to_axi4/next_state" type="array">
+      <obj_property name="ElementShortName">next_state[4:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_w_fifo_to_axi4/wr_req_cnt_thresh" type="array">
+      <obj_property name="ElementShortName">wr_req_cnt_thresh[5:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_req_cnt_thresh[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_w_fifo_to_axi4/fifo_rddata_valid" type="logic">
+      <obj_property name="ElementShortName">fifo_rddata_valid</obj_property>
+      <obj_property name="ObjectShortName">fifo_rddata_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_w_fifo_to_axi4/fifo_rddata_latch" type="array">
+      <obj_property name="ElementShortName">fifo_rddata_latch[127:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_rddata_latch[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_w_fifo_to_axi4/wr_data_cnt" type="array">
+      <obj_property name="ElementShortName">wr_data_cnt[5:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_data_cnt[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_w_fifo_to_axi4/w_burst_done_cnt" type="array">
+      <obj_property name="ElementShortName">w_burst_done_cnt[0:0]</obj_property>
+      <obj_property name="ObjectShortName">w_burst_done_cnt[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_w_fifo_to_axi4/w_brust_complete" type="logic">
+      <obj_property name="ElementShortName">w_brust_complete</obj_property>
+      <obj_property name="ObjectShortName">w_brust_complete</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_w_fifo_to_axi4/w_brust_complete_r" type="array">
+      <obj_property name="ElementShortName">w_brust_complete_r[2:0]</obj_property>
+      <obj_property name="ObjectShortName">w_brust_complete_r[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/u_proc_w_fifo_to_axi4/dynamic_addr" type="array">
+      <obj_property name="ElementShortName">dynamic_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dynamic_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/u_hdmi_r_axi4_to_fifo/r_done" type="logic">
+      <obj_property name="ElementShortName">r_done</obj_property>
+      <obj_property name="ObjectShortName">r_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/u_hdmi_r_axi4_to_fifo/rd_enable" type="logic">
+      <obj_property name="ElementShortName">rd_enable</obj_property>
+      <obj_property name="ObjectShortName">rd_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/u_hdmi_r_axi4_to_fifo/r_module_ddr3_r_req" type="logic">
+      <obj_property name="ElementShortName">r_module_ddr3_r_req</obj_property>
+      <obj_property name="ObjectShortName">r_module_ddr3_r_req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/u_hdmi_r_axi4_to_fifo/hdmi_r_start_pulse" type="logic">
+      <obj_property name="ElementShortName">hdmi_r_start_pulse</obj_property>
+      <obj_property name="ObjectShortName">hdmi_r_start_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/u_hdmi_r_axi4_to_fifo/hdmi_burst_done" type="logic">
+      <obj_property name="ElementShortName">hdmi_burst_done</obj_property>
+      <obj_property name="ObjectShortName">hdmi_burst_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/u_hdmi_r_axi4_to_fifo/r_buf" type="logic">
+      <obj_property name="ElementShortName">r_buf</obj_property>
+      <obj_property name="ObjectShortName">r_buf</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/u_hdmi_r_axi4_to_fifo/r_addr_switch_pulse" type="logic">
+      <obj_property name="ElementShortName">r_addr_switch_pulse</obj_property>
+      <obj_property name="ObjectShortName">r_addr_switch_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/u_hdmi_r_axi4_to_fifo/current_state" type="array">
+      <obj_property name="ElementShortName">current_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">current_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/u_hdmi_r_axi4_to_fifo/next_state" type="array">
+      <obj_property name="ElementShortName">next_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/u_hdmi_r_axi4_to_fifo/rd_req_cnt_thresh" type="array">
+      <obj_property name="ElementShortName">rd_req_cnt_thresh[6:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_req_cnt_thresh[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/u_hdmi_r_axi4_to_fifo/frame_active" type="logic">
+      <obj_property name="ElementShortName">frame_active</obj_property>
+      <obj_property name="ObjectShortName">frame_active</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/u_hdmi_r_axi4_to_fifo/rd_burst_done_cnt" type="array">
+      <obj_property name="ElementShortName">rd_burst_done_cnt[0:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_burst_done_cnt[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/u_hdmi_r_axi4_to_fifo/r_brust_complete" type="logic">
+      <obj_property name="ElementShortName">r_brust_complete</obj_property>
+      <obj_property name="ObjectShortName">r_brust_complete</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/u_hdmi_r_axi4_to_fifo/r_brust_complete_r" type="array">
+      <obj_property name="ElementShortName">r_brust_complete_r[2:0]</obj_property>
+      <obj_property name="ObjectShortName">r_brust_complete_r[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/u_hdmi_r_axi4_to_fifo/dynamic_addr" type="array">
+      <obj_property name="ElementShortName">dynamic_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dynamic_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_w_module_ctrl/cam_w_module_fifo/din" type="array">
+      <obj_property name="ElementShortName">din[15:0]</obj_property>
+      <obj_property name="ObjectShortName">din[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_w_module_ctrl/cam_w_module_fifo/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_w_module_ctrl/cam_w_module_fifo/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_w_module_ctrl/cam_w_module_fifo/dout" type="array">
+      <obj_property name="ElementShortName">dout[127:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_w_module_ctrl/cam_w_module_fifo/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_w_module_ctrl/cam_w_module_fifo/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/proc_r_module_fifo/din" type="array">
+      <obj_property name="ElementShortName">din[127:0]</obj_property>
+      <obj_property name="ObjectShortName">din[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/proc_r_module_fifo/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/proc_r_module_fifo/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/proc_r_module_fifo/dout" type="array">
+      <obj_property name="ElementShortName">dout[15:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/proc_r_module_fifo/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/proc_r_module_fifo/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/proc_w_module_fifo/din" type="array">
+      <obj_property name="ElementShortName">din[15:0]</obj_property>
+      <obj_property name="ObjectShortName">din[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/proc_w_module_fifo/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/proc_w_module_fifo/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/proc_w_module_fifo/dout" type="array">
+      <obj_property name="ElementShortName">dout[127:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/proc_w_module_fifo/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_p_module_ctrl/proc_w_module_fifo/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/hdmi_r_module_fifo/din" type="array">
+      <obj_property name="ElementShortName">din[127:0]</obj_property>
+      <obj_property name="ObjectShortName">din[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/hdmi_r_module_fifo/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/hdmi_r_module_fifo/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/hdmi_r_module_fifo/dout" type="array">
+      <obj_property name="ElementShortName">dout[15:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/hdmi_r_module_fifo/full" type="logic">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ov5640_ddr3_hdmi_tb/u_ov5640_ddr3_hdmi/u_r_module_ctrl/hdmi_r_module_fifo/empty" type="logic">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+</wave_config>

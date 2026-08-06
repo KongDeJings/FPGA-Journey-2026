@@ -88,8 +88,8 @@ module pixel_count_request_ctrl
     always @(posedge clk or posedge reset) begin
         if (reset)
             rd_en_proc_r_fifo <= 0;
-        else if (p_switch_pulse)
-            rd_en_proc_r_fifo <= 1;     // 最高优先级：新帧来了就启动
+        else if (p_switch_pulse&&frame_active)
+            rd_en_proc_r_fifo <= 1;     // 最高优先级：新帧来了就启动，但要跳过第一帧才行
         else if (p_r_done)
             rd_en_proc_r_fifo <= 0;     // 一帧读完停止
         else if (empty_proc_r_fifo)

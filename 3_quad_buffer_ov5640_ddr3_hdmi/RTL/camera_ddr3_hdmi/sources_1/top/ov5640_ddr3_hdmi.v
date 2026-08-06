@@ -133,7 +133,10 @@ module ov5640_ddr3_hdmi
 
     // ==================== 复位及关键信号 ====================
 
-    output               [   4: 0]      state_led                   //指示系统复位状态
+    output               [   4: 0]      state_led                   ,//指示系统复位状态
+    input                               p_bypass                     //用以旁路P模块的图像处理功能，1时旁路
+
+
     
     );
 
@@ -389,6 +392,55 @@ assign hdmi1_oe = 1'b1;
 assign camera_xclk = camera_xclk_24M;
 
 
+
+//==================================================================================================
+//测试图像生成器（定位错位用）修改866行的内容以启用
+//将实现原理：将行号转化为5次突发（256一次突发，1280一共计数5次突发），将列号直接在图像上标记出来，同时标记一帧图像的开始和结尾，用不同颜色
+reg                     test_pixel_valid;
+reg [15:0]              test_pixel_data;
+reg [ 9:0]              test_row;        // 行号 1~720
+reg [10:0]              test_col;        // 列号 0~1279
+reg [ 2:0]              test_burst;      // 行内突发号 1~5
+
+always @(posedge PCLK_bufg) begin
+    if (frame_rst_state) begin
+        test_row   <= 10'd1;
+        test_col   <= 11'd0;
+        test_burst <= 3'd1;
+    end else if (pixel_data_valid) begin
+        if (test_col == IMAGE_WIDTH - 1) begin
+            // 行尾：复位列和突发号，行号加1
+            test_col   <= 11'd0;
+            test_burst <= 3'd1;
+            test_row   <= (test_row == IMAGE_HEIGHT) ? 10'd1 : test_row + 10'd1;
+        end else begin
+            test_col <= test_col + 11'd1;
+            // 每256个像素，突发号加1（1→2→3→4→5→1...）
+            if (test_col > 0 && (test_col % 256 == 0))
+                test_burst <= (test_burst == 3'd5) ? 3'd1 : test_burst + 3'd1;
+        end
+    end
+end
+
+localparam MARKER_BEGIN   = 16'hF7F7;   // 帧头标记：纯白
+localparam MARKER_END = 16'h001F;   // 帧尾标记：纯蓝
+
+always @(posedge PCLK_bufg) begin
+    test_pixel_valid <= pixel_data_valid;
+    
+    // 帧头标记：第1行、第1次突发（列0~255）
+//    if (test_row == 10'd1 && test_burst == 3'd1)
+    if (test_row == 10'd1 &&  test_col == 3'd0)
+        test_pixel_data <= MARKER_BEGIN;
+    // 帧尾标记：第720行、第5次突发（列1024~1279）
+    else if (test_row == IMAGE_HEIGHT && test_burst == 3'd5)
+        test_pixel_data <= MARKER_END;
+    // 其他像素：保持行列编码
+    else
+        test_pixel_data <= {test_row[9:0], 3'b000, test_burst};
+end
+
+
 //=================================================
     reg                                 p_w_busy                   ;
     reg                                 camera_w_busy              ;
@@ -476,11 +528,11 @@ always @(posedge mig_ui_clk or posedge ui_clk_sync_rst) begin
         m_axi_wdata_dynamic    <= {AXI_DATA_WIDTH{1'b0}};
         m_axi_wlast_dynamic    <= 1'b0;
         m_axi_wvalid_dynamic   <= 1'b0;
-        s_axi_bready_dynamic   <= 1'b0;
+        s_axi_bready_dynamic   <= s_axi_bready_dynamic;
     end
 end
 
-//=================================================axi4_r_channel_switch
+
 //=================================================axi4_r_channel_switch
 always @(posedge mig_ui_clk or posedge ui_clk_sync_rst) begin
     if (ui_clk_sync_rst) begin
@@ -505,9 +557,34 @@ always @(posedge mig_ui_clk or posedge ui_clk_sync_rst) begin
         m_axi_arid_dynamic     <= {AXI_ID_WIDTH{1'b0}};
         m_axi_araddr_dynamic   <= {AXI_ADDR_WIDTH{1'b0}};
         m_axi_arvalid_dynamic  <= 1'b0;
-        m_axi_rready_dynamic   <= 1'b0;
+        m_axi_rready_dynamic   <= m_axi_rready_dynamic;
     end
 end
+
+//=================================================
+//将突发启动信号打一拍作为真正的启动信号，与busy对齐时序，防止仲裁产生竞争（这是一个大bug）
+    reg                                 p_w_start_pulse_reg        ;
+    reg                                 p_r_start_pulse_reg        ;
+    reg                                 camera_w_start_pulse_reg   ;
+    reg                                 hdmi_r_start_pulse_reg     ;
+
+    always @(posedge mig_ui_clk or posedge ui_clk_sync_rst)
+        begin
+            if(ui_clk_sync_rst)begin
+                p_w_start_pulse_reg     <=0;
+                p_r_start_pulse_reg     <=0;
+                camera_w_start_pulse_reg<=0;
+                hdmi_r_start_pulse_reg  <=0;              
+            end
+
+            else begin
+                p_w_start_pulse_reg     <=p_w_start_pulse;     
+                p_r_start_pulse_reg     <=p_r_start_pulse;    
+                camera_w_start_pulse_reg<=camera_w_start_pulse;
+                hdmi_r_start_pulse_reg  <=hdmi_r_start_pulse;                   
+            end
+
+        end
 //===============================================================================================================
 //监控探头ILA
 
@@ -808,7 +885,7 @@ w_module_ctrl#(
 // ==================== 对外输出的写完状态信号 ====================
     .camera_w_done                      (camera_w_done             ), // (output)
     .w_module_ddr3_w_req                (w_module_ddr3_w_req       ), // (output)
-    .camera_w_start_pulse               (camera_w_start_pulse      ), // (input)
+    .camera_w_start_pulse               (camera_w_start_pulse_reg  ), // (input)
     .camera_burst_done                  (camera_burst_done         ),// (output)
 // ==================== 缓存切换逻辑信号 =========================
     .w_buf                              (w_buf                     ), // (input)// 0=写帧A, 1=写帧B默认写A
@@ -861,6 +938,7 @@ p_module_ctrl#(
 
     .clk                                (mig_ui_clk                ),// (input)// 处理时钟
     .reset                              (ui_clk_sync_rst           ),// (input)// 高有效复位
+    .p_bypass                           (1                         ),// (input)//用以旁路P模块的图像处理功能，1时旁路
 // ==================== 写地址通道 ====================
     .m_axi_p_awid                       (m_axi_p_awid              ),// (output)
     .m_axi_p_awaddr                     (m_axi_p_awaddr            ),// (output)
@@ -895,9 +973,9 @@ p_module_ctrl#(
     .p_r_done                           (p_r_done                  ),// (output)// 从A-F输出的读完一帧信号
     .p_r_rdenable                       (camera_w_done             ),// (input)// 必须等摄像头写完一帧后才能启动P读
     .p_module_ddr3_w_req                (p_module_ddr3_w_req       ),// (output)
-    .p_w_start_pulse                    (p_w_start_pulse           ),// (input)
+    .p_w_start_pulse                    (p_w_start_pulse_reg       ),// (input)
     .p_module_ddr3_r_req                (p_module_ddr3_r_req       ),// (output)
-    .p_r_start_pulse                    (p_r_start_pulse           ),// (input)
+    .p_r_start_pulse                    (p_r_start_pulse_reg       ),// (input)
     .p_w_burst_done                     (p_w_burst_done            ),// (output)
     .p_r_burst_done                     (p_r_burst_done            ),// (output)
 // ==================== 缓存切换脉冲和指针输入 ====================
@@ -959,7 +1037,7 @@ r_module_ctrl#(
     .r_done                             (r_done                    ),// (output)
     .hdmi_rd_enable                     (p_w_done                  ),// (input)
     .r_module_ddr3_r_req                (r_module_ddr3_r_req       ),// (output)
-    .hdmi_r_start_pulse                 (hdmi_r_start_pulse        ),// (input)
+    .hdmi_r_start_pulse                 (hdmi_r_start_pulse_reg    ),// (input)
     .hdmi_burst_done                    (hdmi_burst_done           ),// (output)
 // ==================== 缓存切换逻辑信号 ====================
     .r_buf                              (r_buf                     ), // (input)// 0=读帧A, 1=读帧B,默认读B
@@ -1083,51 +1161,6 @@ endmodule
 //////////////////////////////////////////    调试过程中弃用的方案       //////////////////////////////////////////////
 /*
 
-//==================================================================================================
-//测试图像生成器（定位错位用），问题已解决，遂弃用
-//将实现原理：将行号转化为5次突发（256一次突发，1280一共计数5次突发），将列号直接在图像上标记出来，同时标记一帧图像的开始和结尾，用不同颜色
-reg                     test_pixel_valid;
-reg [15:0]              test_pixel_data;
-reg [ 9:0]              test_row;        // 行号 1~720
-reg [10:0]              test_col;        // 列号 0~1279
-reg [ 2:0]              test_burst;      // 行内突发号 1~5
 
-always @(posedge PCLK_bufg) begin
-    if (frame_rst_state) begin
-        test_row   <= 10'd1;
-        test_col   <= 11'd0;
-        test_burst <= 3'd1;
-    end else if (pixel_data_valid) begin
-        if (test_col == IMAGE_WIDTH - 1) begin
-            // 行尾：复位列和突发号，行号加1
-            test_col   <= 11'd0;
-            test_burst <= 3'd1;
-            test_row   <= (test_row == IMAGE_HEIGHT) ? 10'd1 : test_row + 10'd1;
-        end else begin
-            test_col <= test_col + 11'd1;
-            // 每256个像素，突发号加1（1→2→3→4→5→1...）
-            if (test_col > 0 && (test_col % 256 == 0))
-                test_burst <= (test_burst == 3'd5) ? 3'd1 : test_burst + 3'd1;
-        end
-    end
-end
-
-localparam MARKER_BEGIN   = 16'hF7F7;   // 帧头标记：纯白
-localparam MARKER_END = 16'h001F;   // 帧尾标记：纯蓝
-
-always @(posedge PCLK_bufg) begin
-    test_pixel_valid <= pixel_data_valid;
-    
-    // 帧头标记：第1行、第1次突发（列0~255）
-//    if (test_row == 10'd1 && test_burst == 3'd1)
-    if (test_row == 10'd1 &&  test_col == 3'd0)
-        test_pixel_data <= MARKER_BEGIN;
-    // 帧尾标记：第720行、第5次突发（列1024~1279）
-    else if (test_row == IMAGE_HEIGHT && test_burst == 3'd5)
-        test_pixel_data <= MARKER_END;
-    // 其他像素：保持行列编码
-    else
-        test_pixel_data <= {test_row[9:0], 3'b000, test_burst};
-end
 
 */

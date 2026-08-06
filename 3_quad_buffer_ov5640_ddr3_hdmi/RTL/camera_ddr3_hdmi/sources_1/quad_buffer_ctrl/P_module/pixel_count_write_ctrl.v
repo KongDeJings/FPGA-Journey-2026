@@ -41,10 +41,11 @@ module pixel_count_write_ctrl
 
 
     // ==================== 输入的fifo写入信号 ====================.
-    input                                  full_proc_w_fifo               ,
-    input  [W_FIFO_RD_DATA_CNT_WIDTH-1: 0] wr_data_count_proc_w_fifo      ,
-    output      [ FIFO_USER_DATA_WIDTH-1: 0]    din_proc_w_fifo           ,
-    output                                   wr_en_proc_w_fifo         ,
+    input                               full_proc_w_fifo           ,
+    input                [W_FIFO_RD_DATA_CNT_WIDTH-1: 0]wr_data_count_proc_w_fifo  ,
+    output               [FIFO_USER_DATA_WIDTH-1: 0]din_proc_w_fifo            ,
+    output                              wr_en_proc_w_fifo          ,
+    input                               rd_en_proc_r_fifo          ,
 
       
     // ==================== 对外输出p模块写完信号 ====================
@@ -54,7 +55,7 @@ module pixel_count_write_ctrl
 //===============================================================================================================
 //逻辑输出
 assign din_proc_w_fifo=video_data_out;
-assign  wr_en_proc_w_fifo = video_data_out_valid && (!full_proc_w_fifo);
+assign  wr_en_proc_w_fifo = video_data_out_valid && (!full_proc_w_fifo)&&rd_en_proc_r_fifo;
 //===============================================
 //输出当前帧写完信号
     always @(posedge clk or posedge reset) begin

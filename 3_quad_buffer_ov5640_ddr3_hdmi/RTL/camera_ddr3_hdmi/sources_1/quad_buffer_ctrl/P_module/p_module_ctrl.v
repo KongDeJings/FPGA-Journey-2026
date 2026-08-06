@@ -145,7 +145,8 @@ module p_module_ctrl
     // ==================== 缓存切换脉冲和指针输入 ====================
     input                               p_rd_buf                   ,// 当前从哪个读
     input                               p_wr_buf                   ,// 当前往哪个写
-    input                               p_switch_pulse              // 与p_rd/p_wr同拍变化(P模块同一时间占用两个buf)
+    input                               p_switch_pulse             ,// 与p_rd/p_wr同拍变化(P模块同一时间占用两个buf)
+    input                               p_bypass                    
 );
 
 //===============================================================================================================   
@@ -200,6 +201,11 @@ module p_module_ctrl
     wire                                       video_data_hs              ;
     wire                                       video_data_vs              ;
 
+    // ==================== 旁路功能 ====================
+    wire    [RGB_PIC_DATA_WIDTH-1: 0]    video_data_dynamic                 ;// RGB565数据输出
+    wire                                 video_data_out_valid_dynamic       ;// 输出有效
+    wire                                 video_data_out_hs_dynamic          ;// 输出行同步
+    wire                                 video_data_out_vs_dynamic          ;// 输出场同步
 //===============================================================================================================
 //逻辑输出
 //===================================
@@ -216,6 +222,14 @@ end
 
 assign p_done = p_w_done;
 assign p_idle = p_idle_reg;
+
+
+//===================================
+//产生p模块旁路逻辑，p_bypass为1时旁路
+assign video_data_dynamic            =p_bypass?video_data       :   video_data_out      ;
+assign video_data_out_valid_dynamic  =p_bypass?video_data_valid :   video_data_out_valid;
+assign video_data_out_hs_dynamic     =p_bypass?video_data_hs    :   video_data_out_hs   ;
+assign video_data_out_vs_dynamic     =p_bypass?video_data_vs    :   video_data_out_vs   ;
 
 //===============================================================================================================
 //调用底层模块
@@ -488,15 +502,16 @@ pixel_count_write_ctrl#(
     .clk                                (clk                       ), // (input)// 处理时钟
     .reset                              (reset                     ), // (input)// 高有效复位
 // ==================== 输入的视频信号 ====================
-    .video_data_out                     (video_data_out            ), // (input)// RGB565数据输出
-    .video_data_out_valid               (video_data_out_valid      ), // (input)// 输出有效
-    .video_data_out_hs                  (video_data_out_hs         ), // (input)// 输出行同步
-    .video_data_out_vs                  (video_data_out_vs         ), // (input)// 输出场同步
+    .video_data_out                     (video_data_dynamic        ),// (input)// RGB565数据输出
+    .video_data_out_valid               (video_data_out_valid_dynamic),// (input)// 输出有效
+    .video_data_out_hs                  (video_data_out_hs_dynamic ),// (input)// 输出行同步
+    .video_data_out_vs                  (video_data_out_vs_dynamic ),// (input)// 输出场同步
 // ==================== 输入的fifo写入信号 ====================.
     .full_proc_w_fifo                   (full_proc_w_fifo          ), // (input)
     .wr_data_count_proc_w_fifo          (wr_data_count_proc_w_fifo ), // (input)此信号无用
     .din_proc_w_fifo                    (din_proc_w_fifo           ), // (output)
-    .wr_en_proc_w_fifo                  (wr_en_proc_w_fifo         ) // (output)
+    .wr_en_proc_w_fifo                  (wr_en_proc_w_fifo         ), // (output)
+    .rd_en_proc_r_fifo                  (rd_en_proc_r_fifo         )// input wire rd_en
 // ==================== 对外输出p模块写完信号 ====================
 //    .p_w_done                           (                          ) // (output)此信号仅代表所有数据写入fifo完成，fifo内可能还憋着几次突发！如果这时候切，会导致写错缓存
 );                                                                    // (output)此信号没吊用

@@ -139,7 +139,14 @@ module p_module_ctrl_test
     wire                                       video_data_vs              ;
     wire                                       p_r_done                   ;
 
+    // ==================== 旁路功能 ====================
+    wire    [RGB_PIC_DATA_WIDTH-1: 0]    video_data_dynamic                 ;// RGB565数据输出
+    wire                                 video_data_out_valid_dynamic       ;// 输出有效
+    wire                                 video_data_out_hs_dynamic          ;// 输出行同步
+    wire                                 video_data_out_vs_dynamic          ;// 输出场同步
 
+wire p_bypass;
+assign p_bypass=1;
     // ==================== pixel_count_write_ctrl输出接口 ====================   
     wire                                       p_w_done                   ;
 
@@ -156,6 +163,12 @@ end
 assign p_done = p_w_done;
 assign p_idle = p_idle_reg;
 
+//===================================
+//产生p模块旁路逻辑，p_bypass为1时旁路
+assign video_data_dynamic            =p_bypass?video_data       :   video_data_out      ;
+assign video_data_out_valid_dynamic  =p_bypass?video_data_valid :   video_data_out_valid;
+assign video_data_out_hs_dynamic     =p_bypass?video_data_hs    :   video_data_out_hs   ;
+assign video_data_out_vs_dynamic     =p_bypass?video_data_vs    :   video_data_out_vs   ;
 //===============================================================================================================
 //调用底层模块
 ////////////////////////////////////////// proc_r_module_fifo  //////////////////////////////////////////////

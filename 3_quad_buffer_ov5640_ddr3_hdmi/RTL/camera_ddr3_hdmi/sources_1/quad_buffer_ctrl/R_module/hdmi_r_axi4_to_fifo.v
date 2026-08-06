@@ -80,7 +80,7 @@ module hdmi_r_axi4_to_fifo
     input                [   1: 0]      m_axi_rresp                ,
     input                               m_axi_rlast                ,
     input                               m_axi_rvalid               ,
-    output                              m_axi_rready               ,
+    output   reg                        m_axi_rready               ,
 
     //==================== 实验接口 ====================
     output                               r_done                    ,
@@ -132,7 +132,6 @@ always @(posedge clk or posedge reset) begin
 end
 
 // ==================== 第二段：下一状态逻辑 ====================
-reg rd_ddr3_req_pulse;
 
 
 always @(*) begin
@@ -171,7 +170,12 @@ end
 
 
 //=========================m_axi_rready信号怎么产生=======================================//
- assign m_axi_rready  = ~fifo_alfull;    //当fifo将要满时，代表fifo中有足够的数据可以读取，此时“ready”较为合适
+always @(posedge clk or posedge reset) begin
+    if (reset)
+        m_axi_rready <= 0;
+    else if (~fifo_alfull)
+        m_axi_rready <= 1;
+end
  //assign m_axi_rready  = 1'b1;
 
 //=========================产生帧激活信号frame_active======================================//
@@ -288,11 +292,13 @@ end
         if(reset)
             fifo_wrreq <= 1'b0;
         else
-            fifo_wrreq <= m_axi_rvalid & m_axi_rready&&frame_active;
+            fifo_wrreq <= m_axi_rvalid && m_axi_rready&&frame_active &&(m_axi_rid==AXI_ID);
         end
 
     always @(posedge clk) begin
-        if(m_axi_rvalid && m_axi_rready&&frame_active)
+        if(reset)
+            fifo_wrdata <= 0;        
+        else if(m_axi_rvalid && m_axi_rready&&frame_active&&(m_axi_rid==AXI_ID))
             fifo_wrdata <= m_axi_rdata;
         end
 
