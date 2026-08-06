@@ -116,7 +116,7 @@ FIFO
 ### 1. 初始方案：基于AXI SmartConnect的多主控互联
 
 为构建四缓冲架构，需解决Camera写、P模块读写、HDMI读四个Master对单一DDR3从设备（MIG）的并发访问问题。初始方案采用Xilinx官方IP——**AXI SmartConnect**，将其配置为多Slave接口、单Master接口的互联矩阵。
-####基于AXI SmartConnect的四缓冲架构图
+#### 基于AXI SmartConnect的四缓冲架构图
 ![四缓冲核心架构图](./IMAGES/视频缓存项目（四缓旧.png)
 
 ### 2. 空载测试与问题定位
